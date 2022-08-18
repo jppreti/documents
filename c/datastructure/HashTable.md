@@ -25,15 +25,26 @@ Esse método de pesquisa também pode ser encontrado na literatura por hashing, 
 
 A ideia é descobrir a posição em que o elemento se encontra sem precisar varrer todas as chaves ou posições. A tabela hash possui essa propriedade, veja a demonstração abaixo:
 
-![](https://i1.wp.com/www.jppreti.com/wp-content/uploads/2019/07/Captura-de-Tela-2019-07-23-a%CC%80s-19.18.40.png?resize=750%2C240)
+```mermaid
+flowchart LR
+    I[12, 9, 33, 21, 100] --> B{mod 5}
+    B -->|Zero| C[[0]]
+    B -->|One| D[[1]]
+    B -->|Two| E[[2]]
+    B -->|Three| F[[3]]
+    B -->|Four| G[[4]]
+    E[[2]] --> I1[12]
+    G[[4]] --> I2[9]
+    F[[3]] --> I3[33]
+    D[[1]] --> I4[21]
+    C[[0]] --> I5[100]
+```
 
-Função de Hash realizando o espalhamento na Tabela hash
+Perceba que temos um vetor de 5 posições (0-4). Sempre que precisarmos armazenar ou buscar um dado basta aplicar a **função de hash**, que neste exemplo é o resto (`mod`) da divisão por 5 (número de posições).
 
-Perceba que temos um vetor de 11 posições (0-10). Sempre que precisarmos armazenar ou buscar um dado basta aplicar a **função de hash**, que neste exemplo é o resto (`mod`) da divisão por 11 (número de posições).
+Perceba que para sabermos aonde está localizado o número 9 não precisamos percorrer o vetor, basta realizar o cálculo de hash (9 mod 5) para descobrir a posição (4).
 
-Perceba que para sabermos aonde está localizado o número 72 não precisamos percorrer o vetor, basta realizar o cálculo de hash (72 mod 11) para descobrir a posição (6).
-
-Perceba também que apesar de simples, essa função mapeia dados de comprimento variável para dados de comprimento fixo. Independente do tamanho do número, o resultado sempre será um valor entre 0 e 10.
+Perceba também que apesar de simples, essa função mapeia dados de comprimento variável para dados de comprimento fixo. Independente do tamanho do número, o resultado sempre será um valor entre 0 e 4.
 
 ## 4.1. Conclusão
 
@@ -56,7 +67,21 @@ A tabela de hash tem tamanho finito e o conjunto de dados de entrada pode ser �
 
 Uma forma de tratamento é a utilização de vetores para a tabela de hash e cada posição do vetor ser um ponteiro de uma lista encadeada. Veja figura abaixo:
 
-![](https://i0.wp.com/www.jppreti.com/wp-content/uploads/2019/07/Captura-de-Tela-2019-07-23-a%CC%80s-19.54.02.png?resize=750%2C143)
+```mermaid
+flowchart LR
+    I[12, 9, 33, 21, 100, 88] --> B{mod 5}
+    B -->|Zero| C[[0]]
+    B -->|One| D[[1]]
+    B -->|Two| E[[2]]
+    B -->|Three| F[[3]]
+    B -->|Four| G[[4]]
+    E[[2]] --> I1[[12]]
+    G[[4]] --> I2[[9]]
+    F[[3]] --> I3[[33]]
+    D[[1]] --> I4[[21]]
+    C[[0]] --> I5[[100]]
+    I3[[33]] --> I6[[88]]
+```
 
 Tabela Hash utilizando Lista Simplesmente Ligada para as colisões
 
@@ -384,7 +409,3 @@ int main() {
     return 0;
 }
 ```
-
-
-
-
