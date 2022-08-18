@@ -41,21 +41,29 @@ Faça o download e instalação da última versão de Python em [Download Pytho
 
 Se quiser verificar se já está instalado em sua máquina ou verificar a versão, abra o terminal (prompt de comando) e digite o comando:
 
+```shell
 python3 --version
+```
 
 ## 1.7. Olá Mundo!
 
 Para fazer um teste e saber como executar seus códigos em python, crie um arquivo `ola_mundo.py` em qualquer editor de texto *plain text* com o seguinte conteúdo:
 
-`print('Olá Mundo!')`
+```python
+print('Olá Mundo!')
+```
 
 Salve, abra o terminal e execute por meio do comando:
 
-`python3 ola_mundo.py`
+```shell
+python3 ola_mundo.py
+```
 
 Caso queira executar o programa em python e permanecer no interpretador, basta adicionar o parâmetro `-i`.
 
-`python3 -i ola_mundo.py`
+```shell
+python3 -i ola_mundo.py
+```
 
 ## 1.8. Interpretador
 
@@ -63,7 +71,9 @@ Para ativar o interpretador Python e programar executando imediatamente após te
 
 Para sair do interpretador basta digitar o comando:
 
-`exit()`
+```shell
+>>> exit()
+```
 
 Caso queira executar python em um ambiente de contêiner, recomendamos a leitura dos artigos:
 
@@ -74,7 +84,9 @@ No ambiente de container recomendamos o uso dos editores **ipython** ou **Vis
 
 Para o `ipython` recomendamos executá-lo com o comando:
 
-`PYTHONIOENCODING=UTF-8 ipython3`
+```shell
+PYTHONIOENCODING=UTF-8 ipython3
+```
 
 para que a acentuação apareça corretamente.
 
@@ -82,7 +94,9 @@ Recomendamos também o uso de alguma ferramenta de lint, como `pylint` para veri
 
 Caso tenha o pylint instalado basta executar o comando:
 
-`pylint ola_mundo.py`
+```shell
+pylint ola_mundo.py
+```
 
 O programa irá sugerir correções no código e também atribuirá uma nota ao final do relatório.
 
@@ -90,39 +104,34 @@ O programa irá sugerir correções no código e também atribuirá uma nota ao 
 
 Ao contrário de outras linguagens de programação, Python não tem um comando para declaração de variável. Uma variável é criada a partir do momento em que você associa um valor a ela.
 
-`valor = 5 # valor é do tipo int`
-
-`nome = 'João' # nome é do tipo str (pode-se usar ' ou ")`
-
-`print(valor)`
-
-`print(nome)`
+```python
+valor = 5 # valor é do tipo int
+nome = 'João' # nome é do tipo str (pode-se usar ' ou ")
+print(valor)
+print(nome)
+```
 
 ## 2.1. Variáveis Globais
 
 São variáveis criadas fora de funções e portanto visíveis por qualquer função no seu código:
 
-`nome = 'João'`
-
-`def diga_ola():`
-
-`    print('Olá ' + nome)`
-
-`diga_ola()`
+```python
+nome = 'João'
+def diga_ola():
+    print('Olá ' + nome)
+diga_ola()
+```
 
 Se você criar uma variável local (dentro da função) ela será visível apenas dentro da função:
 
-`nome = 'João'`
-
-`def diga_ola():`
-
-`    nome = 'Maria'`
-
-`    print('Olá ' + nome)`
-
-`diga_ola()`
-
-`print('Olá ' + nome)`
+```python
+nome = 'João'
+def diga_ola():
+    nome = 'Maria'
+    print('Olá ' + nome)
+diga_ola()
+print('Olá ' + nome)
+```
 
 # 3. Tipos de Dados
 
@@ -138,9 +147,10 @@ Os tipos de dados padrão podem ser enquadrados nas seguintes categorias:
 
 Para descobrir o tipo utilize o comando `type`:
 
-`valor = 5`
-
-`print(type(valor))`
+```python
+valor = 5
+print(type(valor))
+```
 
 ## 3.1. Exemplos
 
@@ -163,43 +173,37 @@ Para descobrir o tipo utilize o comando `type`:
 
 ## 3.2. Conversão de Tipos
 
-`x = 1`
-
-`y = 7.7`
-
-`a = float(x)`
-
-`b = int(y)`
-
-`c = str(a)`
-
-`print(a)`
-
-`print(b)`
-
-`print(c)`
-
-`print(type(a))`
-
-`print(type(b))`
-
-`print(type(c))`
+```python
+x = 1
+y = 7.7
+a = float(x)
+b = int(y)
+c = str(a)
+print(a)
+print(b)
+print(c)
+print(type(a))
+print(type(b))
+print(type(c))
+```
 
 ## 3.3. Números Aleatórios
 
 Para geração de números aleatórios faz-se necessário importar o módulo `random`:
 
-`import random`
-
-`print(random.randrange(1,10))`
+```python
+import random
+print(random.randrange(1,10))
+```
 
 ## 3.4. Entrada de Dados
 
 Para solicitar ao usuário a entrada de dados utilize o comando `input`:
 
-`nome = input('Digite seu nome: ')`
-
-`print(nome)`
+```python
+nome = input('Digite seu nome: ')
+print(nome)
+```
 
 ## 3.5. String são Vetores
 
@@ -207,37 +211,24 @@ Strings em Python são arrays de bytes representando caracteres Unicode. Contudo
 
 O colchete `[]` pode ser utilizado para acessar os caracteres da string:
 
-`nome = ' João Paulo '`
-
-`print(len(nome)) #tamanho da string`
-
-`nome = nome.strip() #remove os espaços em branco nas extremidades`
-
-`print(len(nome))`
-
-`print(nome[1]) #o primeiro caractere é o de posição 0`
-
-`print(nome[2:4]) #de 2 a 3 (último não incluso)`
-
-`print(nome[-5:-1]) #começa a contagem pelo final da string`
-
-`print(nome.lower()) #transforma em minúsculo`
-
-`print(nome.upper()) #transforma em maiúsculo`
-
-`print(nome.replace('o','0')) #substitui a string`
-
-`print(nome.split(' ')) #returns ["João","Paulo"]`
-
-`print('au' in nome)) #retorna True se existe na string`
-
-`print('au' not in nome)) #retorna True se não existe na string`
-
-`idade = 40`
-
-`texto = 'Meu nome é {} e tenho {} anos.'`
-
-`print(texto.format(nome,idade))`
+```python
+nome = ' João Paulo '
+print(len(nome)) #tamanho da string
+nome = nome.strip() #remove os espaços em branco nas extremidades
+print(len(nome))
+print(nome[1]) #o primeiro caractere é o de posição 0
+print(nome[2:4]) #de 2 a 3 (último não incluso)
+print(nome[-5:-1]) #começa a contagem pelo final da string
+print(nome.lower()) #transforma em minúsculo
+print(nome.upper()) #transforma em maiúsculo
+print(nome.replace('o','0')) #substitui a string
+print(nome.split(' ')) #returns ["João","Paulo"]
+print('au' in nome)) #retorna True se existe na string
+print('au' not in nome)) #retorna True se não existe na string
+idade = 40
+texto = 'Meu nome é {} e tenho {} anos.'
+print(texto.format(nome,idade))
+```
 
 # 4. Operadores
 
@@ -292,57 +283,43 @@ O colchete `[]` pode ser utilizado para acessar os caracteres da string:
 
 # 5. Estrutura de Condição
 
-`nota = 7`
-
-`if nota >= 7:`
-
-`    print('Aprovado')`
-
-`elif nota >= 5:`
-
-`    print('Recuperação')`
-
-`else:`
-
-`    print('Reprovado')`
+```python
+nota = 7
+if nota >= 7:
+    print('Aprovado')
+elif nota >= 5:
+    print('Recuperação')
+else:
+    print('Reprovado')
+```
 
 # 6. Laços de Repetição
 
 ## 6.1. While
 
-`x = 0`
-
-`while x < 10:`
-
-`    if x == 7:`
-
-`        break #interrompe a execução do laço`
-
-`    x += 1`
-
-`    if x == 3:`
-
-`        continue #salta para a próxima iteração`
-
-`    print(x)`
-
-`else:`
-
-`    print('Fim!') #nunca é executado, já que x nunca é >= 10`
+```python
+x = 0
+while x < 10:
+    if x == 7:
+        break #interrompe a execução do laço
+    x += 1
+    if x == 3:
+        continue #salta para a próxima iteração
+    print(x)
+else:
+    print('Fim!') #nunca é executado, já que x nunca é >= 10
+```
 
 ## 6.2. For
 
-`usuarios = ['carolina','diogo','maria','pedro']`
-
-`for u in usuarios:`
-
-`    print(u)`
-
-`for x in range(7): print(x) #vai de 0 a 6 com incremento de 1`
-
-`for x in range(2,7): print(x) #vai de 2 a 6 com incremento de 1`
-
-`for x in range(0,7,2): print(x) #vai de 0 a 6 com incremento de 2`
+```python
+usuarios = ['carolina','diogo','maria','pedro']
+for u in usuarios:
+    print(u)
+for x in range(7): print(x) #vai de 0 a 6 com incremento de 1
+for x in range(2,7): print(x) #vai de 2 a 6 com incremento de 1
+for x in range(0,7,2): print(x) #vai de 0 a 6 com incremento de 2
+```
 
 # 7. Coleções
 
@@ -359,15 +336,17 @@ Há 4 tipos de coleções:
 
 Listas são coleções de objetos, segue a idéia de um vetor em outras linguagens. Uma lista pode conter quaisquer valores, inclusive tipos mistos (inteiros, strings, datas, …) e até mesmo outras listas dentro dela.
 
-`lista = [12.3, 'Maria', 4, ['a','b','c']]`
+```python
+lista = [12.3, 'Maria', 4, ['a','b','c']]
+```
 
 Podemos também criar uma lista a partir da função `list()`:
 
-`lista = list('João Paulo')`
-
-`lista`
-
-`['J','o','ã','o',' ','P','a','u','l','o']`
+```python
+lista = list('João Paulo')
+lista
+['J','o','ã','o',' ','P','a','u','l','o']
+```
 
 Para adicionarmos elementos na lista podemos utilizar:
 
@@ -377,17 +356,14 @@ Para adicionarmos elementos na lista podemos utilizar:
 
 Exemplos:
 
-`lista = [0,1] # cria uma lista com dois elementos (0 e 1)`
-
-`lista = lista * 2 # repete o valor da lista duas vezes`
-
-`lista += [2,3] # adiciona os valores 2 e 3 ao final da lista`
-
-`lista.append(4) # adiciona o valor 4 ao final da lista`
-
-`lista.extend([5,6,7]) # adiciona 3 elementos ao final da lista`
-
-`lista.insert(0,-1) # adiciona o valor -1 na posição 0`
+```python
+lista = [0,1] # cria uma lista com dois elementos (0 e 1)
+lista = lista * 2 # repete o valor da lista duas vezes
+lista += [2,3] # adiciona os valores 2 e 3 ao final da lista
+lista.append(4) # adiciona o valor 4 ao final da lista
+lista.extend([5,6,7]) # adiciona 3 elementos ao final da lista
+lista.insert(0,-1) # adiciona o valor -1 na posição 0
+```
 
 Outras funções importantes de `List`:
 
@@ -406,43 +382,37 @@ Tuplas também são coleções de objetos e segue a mesma lógica das listas, a 
 
 Apesar de não podermos utilizar funções que alteram o conteúdo de uma tupla, podemos inserir listas dentro de tuplas e alterar as listas:
 
-`tupla = (0,1,2,3,[4,5,6])`
-
-`tupla[4].remove(5)`
+```python
+tupla = (0,1,2,3,[4,5,6])
+tupla[4].remove(5)
+```
 
 ## 7.3. Set
 
 Um conjunto também é uma coleção de elementos, mas diferente de listas e tuplas, `set` é uma estrutura **não ordenada** e que **não permite** elementos em **duplicidade**.
 
-`a = {0,1,2,3,4,5,6}`
-
-`b = {4,5,6,7,8,9}`
-
-`a - b # diferença entre conjuntos`
-
-`a | b # união`
-
-`a & b # intersecção`
-
-`a ^ b # diferença simétrica`
+```python
+a = {0,1,2,3,4,5,6}
+b = {4,5,6,7,8,9}
+a - b # diferença entre conjuntos
+a | b # união
+a & b # intersecção
+a ^ b # diferença simétrica
+```
 
 ## 7.4. Dictionary
 
 `List`, `tuple`, `range` e `str` são sequências ordenadas e `sets` são coleções de elementos não ordenados. O **Dicionário** é mais uma estrutura de dados **não ordenada**. A principal diferença é que podemos acessar seus elementos através de chaves e não de sua posição.
 
-`clientes = {`
-
-`    '000.000.000-00':'João Paulo',`
-
-`    '111.111.111-11':'Maria',`
-
-`    '222.222.222-22':'Pedro',`
-
-`    '123.456.789-00':'Claudia'`
-
-`}`
-
-`print(clientes['222.222.222-22'])`
+```python
+clientes = {
+    '000.000.000-00':'João Paulo',
+    '111.111.111-11':'Maria',
+    '222.222.222-22':'Pedro',
+    '123.456.789-00':'Claudia'
+}
+print(clientes['222.222.222-22'])
+```
 
 # 8. Arquivo
 
@@ -450,31 +420,25 @@ Para abrir um arquivo, o Python possui a função `open()`. Ela recebe dois par
 
 Vejamos abaixo exemplo de criação e depois leitura de um arquivo texto:
 
-`arquivo = open('usuarios.txt','a') # abre o arquivo para escrita`
-
-`arquivo.write('joao.preti@gmail.com\n') # escreve no arquivo`
-
-`arquivo.write('maria@gmail.com\n') # escreve no arquivo`
-
-`arquivo.close() # fecha o arquivo`
-
-`...`
-
-`arquivo = open('usuarios.txt','r') # abre o arquivo para leitura`
-
-`for linha in arquivo:`
-
-`    print(linha.strip()) # imprime a linha retirando o \n`
-
-`arquivo.close() # fecha o arquivo`
+```python
+arquivo = open('usuarios.txt','a') # abre o arquivo para escrita
+arquivo.write('joao.preti@gmail.com\n') # escreve no arquivo
+arquivo.write('maria@gmail.com\n') # escreve no arquivo
+arquivo.close() # fecha o arquivo
+...
+arquivo = open('usuarios.txt','r') # abre o arquivo para leitura
+for linha in arquivo:
+    print(linha.strip()) # imprime a linha retirando o \n
+arquivo.close() # fecha o arquivo
+```
 
 Como boa prática de programação recomendamos utilizar o comando `with` para navegar no arquivo, visto que este garante que o arquivo será fechado automaticamente ao final do escopo:
 
-`with open('usuarios.txt') as arquivo:`
-
-`    for linha in arquivo:`
-
-`        print(linha.strip())`
+```python
+with open('usuarios.txt') as arquivo:
+    for linha in arquivo:
+        print(linha.strip())
+```
 
 `close()` não é mais necessário
 
