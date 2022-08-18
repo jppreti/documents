@@ -64,15 +64,14 @@ void showMem(DoublyLinkedList *list);
 A estrutura em memória deverá se parecer com algo do tipo:
 
 ```mermaid
-Lista Duplamente Ligada:
-
-graph DLL;
-    [*p,NULL,*n] --> [*p,*d1,*n];
-    [*p,*d1,*n] --> [*p,NULL,*n];
-    [*p,*d1,*n] --> [*p,*d2,*n];
-    [*p,*d2,*n] --> [*p,*d1,*n];
-    [*p,*d2,*n] --> [*p,NULL,*n];
-    [*p,NULL,*n] --> [*p,*d2,*n];
+graph LR;
+    id0("2 | *first") --> id1("*previous | NULL | *next");
+    id1("*previous | NULL | *next") --> id2("*previous | *d1 | *next");
+    id2("*previous | *d1 | *next") --> id1("*previous | NULL | *next");
+    id2("*previous | *d1 | *next") --> id3("*previous | *d2 | *next");
+    id3("*previous | *d2 | *next") --> id2("*previous | *d1 | *next");
+    id3("*previous | *d2 | *next") --> id1("*previous | NULL | *next");
+    id1("*previous | NULL | *next") --> id3[[*previous,*d2,*next]];
 ```
 
 Perceba que, diferentemente da nossa [Lista Simplesmente Ligada](http://www.jppreti.com/2019/07/15/lista-simplesmente-ligada/), essa estrutura é **CIRCULAR**. ou seja, o `previous` do primeiro elemento aponta para o último elemento e o `next` do último elemento aponta para o primeiro elemento.
