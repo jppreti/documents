@@ -151,7 +151,7 @@ Estrutura do Nó para uma Árvore Binária de Grau > 2
 
 Dessa forma podemos representar a mesma árvore da seguinte forma:
 
-![Árvore Binária para representação de Grau > 2](images\ArvoreBinariaGrauMaior2.png)
+![Árvore Binária para representação de Grau > 2](https://github.com/jppreti/documents/blob/main/c/datastructure/images/ArvoreBinariaGrauMaior2.png?raw=true)
 
 Árvore Binária para representação de Grau > 2
 
