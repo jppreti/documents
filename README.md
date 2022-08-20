@@ -17,6 +17,7 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
     - [Árvore](https://github.com/jppreti/documents/blob/main/c/datastructure/Tree.md)
       
       - [Árvore de Busca Binária](https://github.com/jppreti/documents/blob/main/c/datastructure/BinarySearchTree.md)
+      - [Árvore de Compressão](https://github.com/jppreti/documents/blob/main/c/datastructure/CompressTree.md)
   
   - Ferramentas
     
