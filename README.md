@@ -46,3 +46,7 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
     - [https://leetcode.com/](https://leetcode.com/)
     
     - [Google Colab](https://colab.research.google.com/)
+
+- Linux
+  
+  - [Comandos Básicos](https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md)
