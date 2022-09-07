@@ -2,6 +2,53 @@
 
 ## 1.1. ssh
 
+```mermaid
+flowchart LR
+    Linux["fab:fa-linux Linux"]-->Sist.Arquivos
+    Sist.Arquivos-->mkdir
+    Sist.Arquivos-->cd
+    Sist.Arquivos-->ls
+    Sist.Arquivos-->rm
+    Sist.Arquivos-->cp
+    Sist.Arquivos-->mv
+    Sist.Arquivos-->pwd
+    Sist.Arquivos-->touch
+    Sist.Arquivos-->mlocate
+    Linux-->Texto
+    Texto-->vim
+    Texto-->cat
+    Texto-->head
+    Texto-->tail
+    Texto-->diff
+    Texto-->grep
+    Linux-->Disco
+    Disco-->df
+    Disco-->du
+    Linux-->Permissões
+    Permissões-->sudo
+    Permissões-->adduser
+    Permissões-->deluser
+    Permissões-->usermod
+    Permissões-->chown
+    Permissões-->chmod
+    Linux-->Processos
+    Processos-->top
+    Processos-->ps
+    Processos-->kill
+    Linux-->Rede
+    Rede-->ping
+    Rede-->wget
+    Rede-->hostname
+    Rede-->ifconfig
+    Linux-->Util
+    Util-->uname
+    Util-->history
+    Util-->man
+    Util-->clear
+    Util-->keycuts
+    click mkdir "#mkdir"
+```
+
 Conectando a uma instância EC2 via terminal:
 
 ```shell
