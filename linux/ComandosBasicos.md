@@ -137,7 +137,7 @@ Para voltar ao diretório anterior utilize o traço (-) como argumento:
 cd -
 ```
 
-## 1.5. mkdir
+##mkdir
 
 Cria um diretório vazio.
 
