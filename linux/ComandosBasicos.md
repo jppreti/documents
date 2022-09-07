@@ -1,7 +1,5 @@
 # 1. Comandos Básicos em Linux
 
-## 1.1. ssh
-
 ```mermaid
 flowchart LR
     Linux["fab:fa-linux Linux"]-->Sist.Arquivos
@@ -46,8 +44,10 @@ flowchart LR
     Util-->man
     Util-->clear
     Util-->keycuts
-    click mkdir "#mkdir"
+    click mkdir "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#16-cat"
 ```
+
+## ssh
 
 Conectando a uma instância EC2 via terminal:
 
@@ -69,7 +69,7 @@ Outras comandos SSH importantes que vão  além do cliente SSH.
 `sftp` — cliente para transferência de arquivo no estilo de linha de comando FTP
 `sshd` — servidor OpenSSH
 
-## 1.2. ls
+## ls
 
 Lista o conteúdo de um diretório
 
@@ -87,7 +87,7 @@ O comando ls não lista os arquivos ocultospor padrão. Um arquivo oculto é qua
 ls -a
 ```
 
-## 1.3. pwd
+## pwd
 
 Exibe o caminho do diretório atual.
 
@@ -95,7 +95,7 @@ Exibe o caminho do diretório atual.
 pwd
 ```
 
-## 1.4. cd
+## cd
 
 Muda de diretório.
 
@@ -137,7 +137,7 @@ Para voltar ao diretório anterior utilize o traço (-) como argumento:
 cd -
 ```
 
-##mkdir
+## mkdir
 
 Cria um diretório vazio.
 
@@ -147,7 +147,7 @@ Criando um novo diretório dentro do diretório atual:
 mkdir novo_diretorio
 ```
 
-## 1.6. cat
+## cat
 
 Exibe o conteúdo de um arquivo.
 
@@ -155,7 +155,7 @@ Exibe o conteúdo de um arquivo.
 cat /Users/jppreti/Downloads/abc.txt
 ```
 
-## 1.7. touch
+## touch
 
 Cria um arquivo em branco.
 
@@ -163,7 +163,7 @@ Cria um arquivo em branco.
 touch arquivo.txt
 ```
 
-## 1.8. vim
+## vim
 
 Editor de texto de terminal.
 
@@ -171,7 +171,7 @@ Editor de texto de terminal.
 vim arquivo.txt
 ```
 
-## 1.9. rm
+## rm
 
 Exclui arquivos e diretórios.
 
@@ -193,7 +193,7 @@ Para remover um diretório que não está vazio e apagar todo seu conteúdo de f
 rm -rf diretorio
 ```
 
-## 1.10. cp
+## cp
 
 Permite copiar arquivos e diretórios:
 
@@ -217,7 +217,7 @@ Para copiar um diretório incluindo todos os arquivos e subdiretórios dentro de
 cp -r fotos /Users/jppreti/Desktop
 ```
 
-## 1.11. mv
+## mv
 
 Comando utilizado para renomear ou mover arquivos e diretórios de um local para outro.
 
@@ -239,7 +239,7 @@ Para mover varios arquivos e diretorios, especifique o diretório de destino ao 
 mv arquivo1.txt arquivo2.txt /Desktop
 ```
 
-## 1.12. sudo
+## sudo
 
 Eleva os privilégios do usuário.
 
@@ -254,7 +254,7 @@ sudo apt install ansible -y
 sudo cat /temp/
 ```
 
-## 1.13. usermod
+## usermod
 
 Adiciona usuários a grupos.
 
@@ -264,7 +264,7 @@ Para adicionar um usuário para um grupo utilize o argumento -G seguido do nome 
 usermod -a -G Docker Jenkins
 ```
 
-## 1.14. df
+## df
 
 Informa o uso do disco pelo sistema em KBs. Use a opção `-m` para visualizar em MBs.
 
@@ -272,7 +272,7 @@ Informa o uso do disco pelo sistema em KBs. Use a opção `-m` para visualizar e
 df -m
 ```
 
-## 1.15. du
+## du
 
 Informa o quanto de espaço um arquivo ou diretório está ocupando no disco. Utilize a opção `-h` (human readable) para exibir em KBs, MBs, etc.
 
@@ -280,7 +280,7 @@ Informa o quanto de espaço um arquivo ou diretório está ocupando no disco. Ut
 du -h
 ```
 
-## 1.16. head
+## head
 
 O comando head é usado para ver as primeiras linhas de um arquivo de texto. Por padrão, ele vai mostrar as primeiras 10 linhas, mas você pode mudar essa quantidade utilizando a opção `-n`: 
 
@@ -288,7 +288,7 @@ O comando head é usado para ver as primeiras linhas de um arquivo de texto. Por
 head -n 5 arquivo.txt.
 ```
 
-## 1.17. tail
+## tail
 
 O comando tail tem função similar ao comando head, mas mostra as últimas linhas de um arquivo.
 
@@ -296,7 +296,7 @@ O comando tail tem função similar ao comando head, mas mostra as últimas linh
 tail -n arquivo.txt
 ```
 
-## 1.18. diff
+## diff
 
 O comando diff (diferença) compara o conteúdo de dois arquivos linha por linha.
 
@@ -304,7 +304,7 @@ O comando diff (diferença) compara o conteúdo de dois arquivos linha por linha
 diff arquivo1.txt arquivo2.txt
 ```
 
-## 1.19. chmod
+## chmod
 
 Muda as permissões de leitura (+r), escrita (+w) e execução (+x) de um arquivo ou diretório. Por exemplo:
 
@@ -314,7 +314,7 @@ chmod +x arquivo.sh
 
 Torna o arquivo.sh passível de execução.
 
-## 1.20. chown
+## chown
 
 No Linux, todos os arquivos são de propriedade de um usuário específico. O comando chown permite que você mude ou transfira a propriedade de um arquivo para um usuário específico. O exemplo abaixo transfere a propriedade de um arquivo para o usuário jppreti.
 
@@ -322,7 +322,7 @@ No Linux, todos os arquivos são de propriedade de um usuário específico. O co
 chown jppreti arquivo.txt
 ```
 
-## 1.21. mlocate
+## mlocate
 
 Você pode o comando mlocate para localizar um arquivo. A opção `-i` faz com que ele ignore a diferença entre maiúsculas e minúsculas.
 
@@ -334,7 +334,7 @@ mlocate -i laboratorio*programacao
 
 Encontra qualquer arquivo que tenha as palavras `laboratorio` e `programacao`, não importando se as letras são maiúsculas ou minúsculas.
 
-## 1.22. grep
+## grep
 
 Permite que você procure dentro de um arquivo específico. Por exemplo:
 
@@ -344,7 +344,7 @@ grep chown comandosbasicos.txt
 
 Procura pela palavra chwon no arquivo comandosbasicos.txt. Linhas que contêm a palavra pesquisada serão mostradas por completo.
 
-## 1.23. top
+## top
 
 Exibe os processos atuais que estão consumindo a maioria dos recursos da máquina. Por exemplo:
 
@@ -354,7 +354,7 @@ top -u jppreti
 
 Exibe os processos em execução do usuário jppreti. Ao pressionar a letra `K` pode-se informar o número do processo (PID) que deseja encerrar.
 
-## 1.24. kill
+## kill
 
 Se você tem um programa que não está respondendo bem, você pode finalizá-lo manualmente pelo comando `kill`. Ele vai mandar um sinal ao aplicativo com mau funcionamento e instruir que este seja encerrado.
 
@@ -366,7 +366,7 @@ kill 1234
 
 Encerra o processo de código 1234.
 
-## 1.25. ping
+## ping
 
 Verifica o status da conexão de um dispositivo na rede. Por exemplo:
 
@@ -376,11 +376,11 @@ ping google.com
 
 Checa se o Google está acessível e também mede o tempo de resposta.
 
-## 1.26. wget
+## wget
 
 Permite baixar arquivos da internet, simplesmente digite `wget` seguido pelo link de download do arquivo.
 
-## 1.27. uname
+## uname
 
 Significa Unix Name, mostra informações detalhadas sobre seu sistema Linux. Isso inclui o nome da máquina, do sistema operacional, do kernel, etc.
 
@@ -388,11 +388,11 @@ Significa Unix Name, mostra informações detalhadas sobre seu sistema Linux. Is
 uname -a
 ```
 
-## 1.28. history
+## history
 
 Comando que permite rever o histórico de comandos que você já exxecutou no linux.
 
-## 1.29. man
+## man
 
 Está em dúvida sobre como usar um comando, use `man` (manual) para obter ajuda, por exemplo:
 
@@ -402,7 +402,7 @@ man tail
 
 Apresenta ajuda sobre como utilizar o comando `tail`.
 
-## 1.30. hostname
+## hostname
 
 Informa qual seu host/network (da sua rede), se adicionar -I ao final, exibirá o endereço IP da sua rede.
 
@@ -410,15 +410,15 @@ Informa qual seu host/network (da sua rede), se adicionar -I ao final, exibirá 
 hostname -I
 ```
 
-## 1.31. ifconfig
+## ifconfig
 
 Comando que exibe detalhes sobre as interfaces de rede e suas configurações da sua máquina.
 
-## 1.32. whoami
+## whoami
 
 Comando que exibe qual é o usuário logado.
 
-## 1.33. Dicas
+## Dicas
 
 O comando `clear` limpa o terminal, útil quando a tela estiver cheia de muitos comandos utilizados anteriormente. 
 
