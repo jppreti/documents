@@ -54,7 +54,7 @@ A saída padrão do comando ls exibe apenas o nome dos arquivos e diretórios. U
 ls -l 
 ```
 
-O comando ls não lista os arquivos ocultospor padrão. Um arquivo oculto é qualquer arquivo que comece com (`.`). Para exibir os arquivos ocultos utilize a opção `-a`:
+O comando `ls` não lista os arquivos ocultospor padrão. Um arquivo oculto é qualquer arquivo que comece com (`.`). Para exibir os arquivos ocultos utilize a opção `-a`:
 
 ```shell
 ls -a
@@ -80,7 +80,7 @@ cd
 
 Pode utilizar caminhos relativos ou absolutos para mudar de diretório:
 
-Segue exemplo de navegação para o diretório `Downloads`, neste caso o usuário logado é o jppreti:
+Segue exemplo de navegação para o diretório `Downloads`, neste caso o usuário logado é o `jppreti`:
 
 ```shell
 cd /Users/jppreti/Downloads
@@ -104,7 +104,7 @@ Para subir mais dois níveis:
 cd ../../
 ```
 
-Para voltar ao diretório anterior utilize o traço (-) como argumento:
+Para voltar ao diretório anterior utilize o traço (`-`) como argumento:
 
 ```shell
 cd -
@@ -144,7 +144,7 @@ Removendo um diretório vazio:
 rm -d diretorio
 ```
 
-Para remover um diretório que não está vazio e apagar todo seu conteúdo de forma recursiva, utilize o argumento `-r`:
+Para remover um diretório que não está vazio e apagar todo seu conteúdo de forma recursiva, utilize o argumento `-r` (recursive), já o parâmetro `f` (force) não pede confirmação :
 
 ```shell
 rm -rf diretorio
@@ -190,7 +190,7 @@ Para renomear um arquivo é necessário especificar o nome do arquivo no destino
 mv arquivo.txt novo_nome.txt
 ```
 
-Para mover varios arquivos e diretorios, especifique o diretório de destino ao final:
+Para mover vários arquivos e diretórios, especifique o diretório de destino ao final:
 
 ```shell
 mv arquivo1.txt arquivo2.txt /Desktop
@@ -198,7 +198,7 @@ mv arquivo1.txt arquivo2.txt /Desktop
 
 ### mlocate
 
-Você pode o comando mlocate para localizar um arquivo. A opção `-i` faz com que ele ignore a diferença entre maiúsculas e minúsculas.
+Comando utilizado para localizar um arquivo. A opção `-i` faz com que ele ignore a diferença entre maiúsculas e minúsculas.
 
 Para procurar um arquivo que contém duas ou mais palavras, use um asterisco `*`. Por exemplo:
 
@@ -252,7 +252,7 @@ head -n 5 arquivo.txt.
 
 ### tail
 
-O comando tail tem função similar ao comando head, mas mostra as últimas linhas de um arquivo.
+O comando `tail` tem função similar ao comando `head`, mas mostra as últimas linhas de um arquivo.
 
 ```shell
 tail -n 5 arquivo.txt
@@ -260,7 +260,7 @@ tail -n 5 arquivo.txt
 
 ### diff
 
-O comando diff (diferença) compara o conteúdo de dois arquivos linha por linha.
+O comando `diff` (diferença) compara o conteúdo de dois arquivos linha por linha.
 
 ```shell
 diff arquivo1.txt arquivo2.txt
@@ -274,7 +274,7 @@ Permite que você procure dentro de um arquivo específico. Por exemplo:
 grep chown comandosbasicos.txt
 ```
 
-Procura pela palavra chwon no arquivo comandosbasicos.txt. Linhas que contêm a palavra pesquisada serão mostradas por completo.
+Procura pela palavra `chwon` no arquivo comandosbasicos.txt. Linhas que contêm a palavra pesquisada serão mostradas por completo.
 
 ## Permissões
 
@@ -315,7 +315,7 @@ sudo cat /temp/
 
 Adiciona usuários a grupos.
 
-Para adicionar um usuário para um grupo utilize o argumento -G seguido do nome do grupo:
+Para adicionar um usuário para um grupo utilize o argumento `-G` seguido do nome do grupo:
 
 ```shell
 usermod -a -G Docker Jenkins
@@ -323,17 +323,17 @@ usermod -a -G Docker Jenkins
 
 ### chmod
 
-Muda as permissões de leitura (+r), escrita (+w) e execução (+x) de um arquivo ou diretório. Por exemplo:
+Muda as permissões de leitura (`+r`), escrita (`+w`) e execução (`+x`) de um arquivo ou diretório. Por exemplo:
 
 ```shell
 chmod +x arquivo.sh
 ```
 
-Torna o arquivo.sh passível de execução.
+Torna o `arquivo.sh` passível de execução.
 
 ### chown
 
-No Linux, todos os arquivos são de propriedade de um usuário específico. O comando chown permite que você mude ou transfira a propriedade de um arquivo para um usuário específico. O exemplo abaixo transfere a propriedade de um arquivo para o usuário jppreti.
+No Linux, todos os arquivos são de propriedade de um usuário específico. O comando chown permite que você mude ou transfira a propriedade de um arquivo para um usuário específico. O exemplo abaixo transfere a propriedade de um arquivo para o usuário `jppreti`.
 
 ```shell
 chown jppreti arquivo.txt
@@ -355,10 +355,10 @@ flowchart TD
 
 ### df
 
-Informa o uso do disco pelo sistema em KBs. Use a opção `-m` para visualizar em MBs.
+Informa o uso do disco pelo sistema em KBs. Use a opção `-h` para visualizar em KBs, MBs, etc.
 
 ```shell
-df -m
+df -h
 ```
 
 ### du
@@ -389,13 +389,13 @@ Exibe os processos atuais que estão consumindo a maioria dos recursos da máqui
 top -u jppreti
 ```
 
-Exibe os processos em execução do usuário jppreti. Ao pressionar a letra `K` pode-se informar o número do processo (PID) que deseja encerrar.
+Exibe os processos em execução do usuário `jppreti`. Ao pressionar a letra `K` pode-se informar o número do processo (`PID`) que deseja encerrar.
 
 ### kill
 
 Se você tem um programa que não está respondendo bem, você pode finalizá-lo manualmente pelo comando `kill`. Ele vai mandar um sinal ao aplicativo com mau funcionamento e instruir que este seja encerrado.
 
-É preciso conhecer o número de identificação do processo (PID) do programa que você deseja encerrar, que pode ser obtido pelo comando `top` ou pelo comando `ps ux`.  
+É preciso conhecer o número de identificação do processo (`PID`) do programa que você deseja encerrar, que pode ser obtido pelo comando `top` ou pelo comando `ps ux`.  
 
 ```shell
 kill 1234
@@ -502,7 +502,7 @@ Apresenta ajuda sobre como utilizar o comando `tail`.
 
 O comando `clear` limpa o terminal, útil quando a tela estiver cheia de muitos comandos utilizados anteriormente. 
 
-Experimente a tecla TAB para preencher automaticamente o que você está digitando. Por exemplo, se você precisa digitar Downloads, comece a digitar o comando (vamos usar o cd Dow, então aperte a tecla TAB) e o terminal preencherá o restante..
+Experimente a tecla `TAB` para preencher automaticamente o que você está digitando. Por exemplo, se você precisa digitar `Downloads`, comece a digitar o comando (vamos usar o `cd Dow`, então aperte a tecla `TAB`) e o terminal preencherá o restante.
 
 `Ctrl + C` e `Ctrl + Z` são usados para qualquer comando que esteja em execução. `Ctrl + C` interromperá o comando com segurança, e `Ctrl + Z` interrompe de forma abrupta.
 
@@ -510,17 +510,7 @@ Caso o terminal trave acidentalmente com o `Ctrl + S`, simplesmente desfaça o c
 
 `Ctrl + A` move o cursor para o início da linha enquanto `Ctrl + E` move o cursor para o final.
 
-Você pode executar vários comandos em um único comando usando o `;` Use o comando clear para limpar o terminal se estiver cheio de muitos comandos usados anteriormente. 
-
-Experimente o botão TAB para preencher automaticamente o que você está digitando. Por exemplo, se você precisa digitar Documentos, comece a digitar o comando (vamos usar o cd Docu, então aperte a tecla TAB) e o terminal preencherá o restante, mostrando o cd Documents.
-
-Ctrl + C e Ctrl + Z são usados para qualquer comando que esteja funcionando no momento. Ctrl + C interromperá o comando com segurança, e o Ctrl + Z forçara a parada.
-
-Se você congelar seu terminal acidentalmente com o Ctrl + S, simplesmente desfaça o congelamento com Ctrl + Z.
-
-Ctrl + A move você para o início da linha enquanto Ctrl + E move você para o fim.
-
-Você pode executar vários comandos em um único comando usando o `;` para separá-los. Por exemplo:
+Você pode executar vários comandos em um único comando usando o `;` , por exemplo: 
 
 ```shell
 ls ; pwd ; whoami
