@@ -2,6 +2,10 @@
 
 Documentos acerca de diversos assuntos tratados em sala de aula.
 
+- Linux
+  
+  - [Comandos Básicos](https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md)
+
 - C
   
   - Estrutura de Dados
@@ -47,6 +51,3 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
     
     - [Google Colab](https://colab.research.google.com/)
 
-- Linux
-  
-  - [Comandos Básicos](https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md)
