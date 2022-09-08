@@ -1,8 +1,20 @@
 # 1. Comandos Básicos em Linux
 
 ```mermaid
-flowchart LR
+flowchart TD
     Linux["fab:fa-linux Linux"]-->Sist.Arquivos
+    Linux-->Texto
+    Linux-->Disco
+    Linux-->Permissões
+    Linux-->Processos
+    Linux-->Rede
+    Linux-->Util
+```
+
+## Sistema de Arquivos
+
+```mermaid
+flowchart TD
     Sist.Arquivos-->mkdir
     Sist.Arquivos-->cd
     Sist.Arquivos-->ls
@@ -12,38 +24,6 @@ flowchart LR
     Sist.Arquivos-->pwd
     Sist.Arquivos-->touch
     Sist.Arquivos-->mlocate
-    Linux-->Texto
-    Texto-->vim
-    Texto-->cat
-    Texto-->head
-    Texto-->tail
-    Texto-->diff
-    Texto-->grep
-    Linux-->Disco
-    Disco-->df
-    Disco-->du
-    Linux-->Permissões
-    Permissões-->sudo
-    Permissões-->adduser
-    Permissões-->deluser
-    Permissões-->usermod
-    Permissões-->chown
-    Permissões-->chmod
-    Linux-->Processos
-    Processos-->top
-    Processos-->ps
-    Processos-->kill
-    Linux-->Rede
-    Rede-->ping
-    Rede-->wget
-    Rede-->hostname
-    Rede-->ifconfig
-    Linux-->Util
-    Util-->uname
-    Util-->history
-    Util-->man
-    Util-->clear
-    Util-->keycuts
     click mkdir "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#mkdir"
     click cd "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#cd"
     click ls "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ls"
@@ -53,57 +33,9 @@ flowchart LR
     click pwd "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#pwd"
     click touch "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#touch"
     click mlocate "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#mlocate"
-    click vim "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#vim"
-    click cat "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#cat"
-    click head "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#head"
-    click tail "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#tail"
-    click diff "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#diff"
-    click grep "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#grep"
-    click df "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#df"
-    click du "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#du"
-    click sudo "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#sudo"
-    click adduser "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#adduser"
-    click deluser "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#deluser"
-    click usermod "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#usermod"
-    click chmod "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#chmod"
-    click chown "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#chown"
-    click top "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#top"
-    click ps "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#kill"
-    click kill "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#kill"
-    click ping "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ping"
-    click wget "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#wget"
-    click hostname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#hostname"
-    click ifconfig "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ifconfig"
-    click uname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#uname"
-    click history "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#history"
-    click man "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#man"
-    click clear "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#clear"
-    click keycuts "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#Dicas"
 ```
 
-## ssh
-
-Conectando a uma instância EC2 via terminal:
-
-```shell
-ssh -i file.pem username@ip-address
-```
-
-`-i`: Espeficica uma forma de identificação alternativa por meio de arquivo com achave pública.
-username: nome de usuário para login
-`ip-address`: endereço da instância EC2
-
-Outras comandos SSH importantes que vão  além do cliente SSH.
-
-`ssh-keygen` — criar um par de chaves para autenticação por chave pública
-`ssh-copy-id` — configura uma chave pública como autorizada em um servidor
-`ssh-agent` — agente para manter a chave privada para single sign-on
-`ssh-add` — ferramenta para adicionar uma chave ao agente
-`scp` — cliente para transferência de arquivo no estilo de linha de comando RCP
-`sftp` — cliente para transferência de arquivo no estilo de linha de comando FTP
-`sshd` — servidor OpenSSH
-
-## ls
+### ls
 
 Lista o conteúdo de um diretório
 
@@ -121,7 +53,7 @@ O comando ls não lista os arquivos ocultospor padrão. Um arquivo oculto é qua
 ls -a
 ```
 
-## pwd
+### pwd
 
 Exibe o caminho do diretório atual.
 
@@ -129,7 +61,7 @@ Exibe o caminho do diretório atual.
 pwd
 ```
 
-## cd
+### cd
 
 Muda de diretório.
 
@@ -171,7 +103,7 @@ Para voltar ao diretório anterior utilize o traço (-) como argumento:
 cd -
 ```
 
-## mkdir
+### mkdir
 
 Cria um diretório vazio.
 
@@ -181,15 +113,7 @@ Criando um novo diretório dentro do diretório atual:
 mkdir novo_diretorio
 ```
 
-## cat
-
-Exibe o conteúdo de um arquivo.
-
-```shell
-cat /Users/jppreti/Downloads/abc.txt
-```
-
-## touch
+### touch
 
 Cria um arquivo em branco.
 
@@ -197,15 +121,7 @@ Cria um arquivo em branco.
 touch arquivo.txt
 ```
 
-## vim
-
-Editor de texto de terminal.
-
-```shell
-vim arquivo.txt
-```
-
-## rm
+### rm
 
 Exclui arquivos e diretórios.
 
@@ -227,7 +143,7 @@ Para remover um diretório que não está vazio e apagar todo seu conteúdo de f
 rm -rf diretorio
 ```
 
-## cp
+### cp
 
 Permite copiar arquivos e diretórios:
 
@@ -251,7 +167,7 @@ Para copiar um diretório incluindo todos os arquivos e subdiretórios dentro de
 cp -r fotos /Users/jppreti/Desktop
 ```
 
-## mv
+### mv
 
 Comando utilizado para renomear ou mover arquivos e diretórios de um local para outro.
 
@@ -273,7 +189,107 @@ Para mover varios arquivos e diretorios, especifique o diretório de destino ao 
 mv arquivo1.txt arquivo2.txt /Desktop
 ```
 
-## sudo
+### mlocate
+
+Você pode o comando mlocate para localizar um arquivo. A opção `-i` faz com que ele ignore a diferença entre maiúsculas e minúsculas.
+
+Para procurar um arquivo que contém duas ou mais palavras, use um asterisco `*`. Por exemplo:
+
+```shell
+mlocate -i laboratorio*programacao
+```
+
+Encontra qualquer arquivo que tenha as palavras `laboratorio` e `programacao`, não importando se as letras são maiúsculas ou minúsculas.
+
+## Texto
+
+```mermaid
+flowchart TD
+    Texto-->vim
+    Texto-->cat
+    Texto-->head
+    Texto-->tail
+    Texto-->diff
+    Texto-->grep
+    click vim "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#vim"
+    click cat "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#cat"
+    click head "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#head"
+    click tail "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#tail"
+    click diff "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#diff"
+    click grep "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#grep"
+```
+
+### cat
+
+Exibe o conteúdo de um arquivo.
+
+```shell
+cat /Users/jppreti/Downloads/abc.txt
+```
+
+### vim
+
+Editor de texto de terminal.
+
+```shell
+vim arquivo.txt
+```
+
+### head
+
+O comando head é usado para ver as primeiras linhas de um arquivo de texto. Por padrão, ele vai mostrar as primeiras 10 linhas, mas você pode mudar essa quantidade utilizando a opção `-n`: 
+
+```shell
+head -n 5 arquivo.txt.
+```
+
+### tail
+
+O comando tail tem função similar ao comando head, mas mostra as últimas linhas de um arquivo.
+
+```shell
+tail -n arquivo.txt
+```
+
+### diff
+
+O comando diff (diferença) compara o conteúdo de dois arquivos linha por linha.
+
+```shell
+diff arquivo1.txt arquivo2.txt
+```
+
+### grep
+
+Permite que você procure dentro de um arquivo específico. Por exemplo:
+
+```shell
+grep chown comandosbasicos.txt
+```
+
+Procura pela palavra chwon no arquivo comandosbasicos.txt. Linhas que contêm a palavra pesquisada serão mostradas por completo.
+
+## Permissões
+
+```mermaid
+flowchart TD
+    Permissões-->sudo
+    Permissões-->adduser
+    Permissões-->deluser
+    Permissões-->usermod
+    Permissões-->chown
+    Permissões-->chmod
+    Permissões-->whoami
+    click sudo "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#sudo"
+    click adduser "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#adduser"
+    click deluser "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#deluser"
+    click usermod "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#usermod"
+    click chmod "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#chmod"
+    click chown "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#chown"
+    click whoami "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#whoami"
+```
+
+### sudo
 
 Eleva os privilégios do usuário.
 
@@ -288,7 +304,7 @@ sudo apt install ansible -y
 sudo cat /temp/
 ```
 
-## usermod
+### usermod
 
 Adiciona usuários a grupos.
 
@@ -298,47 +314,7 @@ Para adicionar um usuário para um grupo utilize o argumento -G seguido do nome 
 usermod -a -G Docker Jenkins
 ```
 
-## df
-
-Informa o uso do disco pelo sistema em KBs. Use a opção `-m` para visualizar em MBs.
-
-```shell
-df -m
-```
-
-## du
-
-Informa o quanto de espaço um arquivo ou diretório está ocupando no disco. Utilize a opção `-h` (human readable) para exibir em KBs, MBs, etc.
-
-```shell
-du -h
-```
-
-## head
-
-O comando head é usado para ver as primeiras linhas de um arquivo de texto. Por padrão, ele vai mostrar as primeiras 10 linhas, mas você pode mudar essa quantidade utilizando a opção `-n`: 
-
-```shell
-head -n 5 arquivo.txt.
-```
-
-## tail
-
-O comando tail tem função similar ao comando head, mas mostra as últimas linhas de um arquivo.
-
-```shell
-tail -n arquivo.txt
-```
-
-## diff
-
-O comando diff (diferença) compara o conteúdo de dois arquivos linha por linha.
-
-```shell
-diff arquivo1.txt arquivo2.txt
-```
-
-## chmod
+### chmod
 
 Muda as permissões de leitura (+r), escrita (+w) e execução (+x) de um arquivo ou diretório. Por exemplo:
 
@@ -348,7 +324,7 @@ chmod +x arquivo.sh
 
 Torna o arquivo.sh passível de execução.
 
-## chown
+### chown
 
 No Linux, todos os arquivos são de propriedade de um usuário específico. O comando chown permite que você mude ou transfira a propriedade de um arquivo para um usuário específico. O exemplo abaixo transfere a propriedade de um arquivo para o usuário jppreti.
 
@@ -356,29 +332,49 @@ No Linux, todos os arquivos são de propriedade de um usuário específico. O co
 chown jppreti arquivo.txt
 ```
 
-## mlocate
+### whoami
 
-Você pode o comando mlocate para localizar um arquivo. A opção `-i` faz com que ele ignore a diferença entre maiúsculas e minúsculas.
+Comando que exibe qual é o usuário logado.
 
-Para procurar um arquivo que contém duas ou mais palavras, use um asterisco `*`. Por exemplo:
+## Disco
 
-```shell
-mlocate -i laboratorio*programacao
+```mermaid
+flowchart TD
+    Disco-->df
+    Disco-->du
+    click df "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#df"
+    click du "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#du"
 ```
 
-Encontra qualquer arquivo que tenha as palavras `laboratorio` e `programacao`, não importando se as letras são maiúsculas ou minúsculas.
+### df
 
-## grep
-
-Permite que você procure dentro de um arquivo específico. Por exemplo:
+Informa o uso do disco pelo sistema em KBs. Use a opção `-m` para visualizar em MBs.
 
 ```shell
-grep chown comandosbasicos.txt
+df -m
 ```
 
-Procura pela palavra chwon no arquivo comandosbasicos.txt. Linhas que contêm a palavra pesquisada serão mostradas por completo.
+### du
 
-## top
+Informa o quanto de espaço um arquivo ou diretório está ocupando no disco. Utilize a opção `-h` (human readable) para exibir em KBs, MBs, etc.
+
+```shell
+du -h
+```
+
+## Processos
+
+```mermaid
+flowchart TD
+    Processos-->top
+    Processos-->ps
+    Processos-->kill
+    click top "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#top"
+    click ps "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#kill"
+    click kill "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#kill"
+```
+
+### top
 
 Exibe os processos atuais que estão consumindo a maioria dos recursos da máquina. Por exemplo:
 
@@ -388,7 +384,7 @@ top -u jppreti
 
 Exibe os processos em execução do usuário jppreti. Ao pressionar a letra `K` pode-se informar o número do processo (PID) que deseja encerrar.
 
-## kill
+### kill
 
 Se você tem um programa que não está respondendo bem, você pode finalizá-lo manualmente pelo comando `kill`. Ele vai mandar um sinal ao aplicativo com mau funcionamento e instruir que este seja encerrado.
 
@@ -400,7 +396,23 @@ kill 1234
 
 Encerra o processo de código 1234.
 
-## ping
+## Rede
+
+```mermaid
+flowchart TD
+    Rede-->ping
+    Rede-->wget
+    Rede-->hostname
+    Rede-->ifconfig
+    Rede-->ssh
+    click ping "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ping"
+    click wget "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#wget"
+    click hostname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#hostname"
+    click ifconfig "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ifconfig"
+    click ssh "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ssh"
+```
+
+### ping
 
 Verifica o status da conexão de um dispositivo na rede. Por exemplo:
 
@@ -410,11 +422,54 @@ ping google.com
 
 Checa se o Google está acessível e também mede o tempo de resposta.
 
-## wget
+### wget
 
 Permite baixar arquivos da internet, simplesmente digite `wget` seguido pelo link de download do arquivo.
 
-## uname
+### ssh
+
+Conectando a uma instância EC2 via terminal:
+
+```shell
+ssh -i file.pem username@ip-address
+```
+
+`-i`: Espeficica uma forma de identificação alternativa por meio de arquivo com achave pública.
+username: nome de usuário para login `ip-address`: endereço da instância EC2
+
+Outras comandos SSH importantes que vão além do cliente SSH.
+
+`ssh-keygen` — criar um par de chaves para autenticação por chave pública `ssh-copy-id` — configura uma chave pública como autorizada em um servidor `ssh-agent` — agente para manter a chave privada para single sign-on `ssh-add` — ferramenta para adicionar uma chave ao agente `scp` — cliente para transferência de arquivo no estilo de linha de comando RCP `sftp` — cliente para transferência de arquivo no estilo de linha de comando FTP `sshd` — servidor OpenSSH
+
+### hostname
+
+Informa qual seu host/network (da sua rede), se adicionar -I ao final, exibirá o endereço IP da sua rede.
+
+```shell
+hostname -I
+```
+
+### ifconfig
+
+Comando que exibe detalhes sobre as interfaces de rede e suas configurações da sua máquina.
+
+## Utilitários
+
+```mermaid
+flowchart TD
+    Util-->uname
+    Util-->history
+    Util-->man
+    Util-->clear
+    Util-->keycuts
+    click uname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#uname"
+    click history "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#history"
+    click man "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#man"
+    click clear "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#Dicas"
+    click keycuts "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#Dicas"
+```
+
+### uname
 
 Significa Unix Name, mostra informações detalhadas sobre seu sistema Linux. Isso inclui o nome da máquina, do sistema operacional, do kernel, etc.
 
@@ -422,11 +477,11 @@ Significa Unix Name, mostra informações detalhadas sobre seu sistema Linux. Is
 uname -a
 ```
 
-## history
+### history
 
 Comando que permite rever o histórico de comandos que você já exxecutou no linux.
 
-## man
+### man
 
 Está em dúvida sobre como usar um comando, use `man` (manual) para obter ajuda, por exemplo:
 
@@ -436,23 +491,7 @@ man tail
 
 Apresenta ajuda sobre como utilizar o comando `tail`.
 
-## hostname
-
-Informa qual seu host/network (da sua rede), se adicionar -I ao final, exibirá o endereço IP da sua rede.
-
-```shell
-hostname -I
-```
-
-## ifconfig
-
-Comando que exibe detalhes sobre as interfaces de rede e suas configurações da sua máquina.
-
-## whoami
-
-Comando que exibe qual é o usuário logado.
-
-## Dicas
+### Dicas
 
 O comando `clear` limpa o terminal, útil quando a tela estiver cheia de muitos comandos utilizados anteriormente. 
 
