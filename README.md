@@ -9,6 +9,12 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
 - C
   
   - Estrutura de Dados
+
+    - [Ponteiros](https://github.com/jppreti/documents/blob/main/c/datastructure/Ponteiros.md)
+
+    - [Ponteiro Duplo](https://github.com/jppreti/documents/blob/main/c/datastructure/PonteiroDuplo.md)
+
+    - [Lista Simplesmente Ligada](https://github.com/jppreti/documents/blob/main/c/datastructure/LinkedList.md)
     
     - [Lista Duplamente Ligada](https://github.com/jppreti/documents/blob/main/c/datastructure/DoublyLinkedList.md)
     
