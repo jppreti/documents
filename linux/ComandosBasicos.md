@@ -9,6 +9,13 @@ flowchart TD
     Linux-->Processos
     Linux-->Rede
     Linux-->Util
+    click Sist.Arquivos "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#sistema-de-arquivos"
+    click Texto "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#texto"
+    click Disco "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#disco"
+    click Permissões "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#permissões"
+    click Processos "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#processos"
+    click Rede "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#rede"
+    click Util "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#util"
 ```
 
 ## Sistema de Arquivos
