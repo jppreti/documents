@@ -15,7 +15,7 @@ flowchart TD
     click Permissões "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#permissões"
     click Processos "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#processos"
     click Rede "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#rede"
-    click Util "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#util"
+    click Util "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#utilitários"
 ```
 
 ## Sistema de Arquivos
