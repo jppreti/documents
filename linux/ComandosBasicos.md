@@ -255,7 +255,7 @@ head -n 5 arquivo.txt.
 O comando tail tem função similar ao comando head, mas mostra as últimas linhas de um arquivo.
 
 ```shell
-tail -n arquivo.txt
+tail -n 5 arquivo.txt
 ```
 
 ### diff
@@ -472,8 +472,8 @@ flowchart TD
     click uname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#uname"
     click history "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#history"
     click man "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#man"
-    click clear "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#Dicas"
-    click keycuts "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#Dicas"
+    click clear "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#dicas"
+    click keycuts "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#dicas"
 ```
 
 ### uname
