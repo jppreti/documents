@@ -214,16 +214,22 @@ Encontra qualquer arquivo que tenha as palavras `laboratorio` e `programacao`, n
 flowchart TD
     Texto-->vim
     Texto-->cat
+    Texto-->more
     Texto-->head
     Texto-->tail
     Texto-->diff
     Texto-->grep
+    Texto-->cut
+    Texto-->wc
     click vim "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#vim"
     click cat "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#cat"
+    click more "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#more"
     click head "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#head"
     click tail "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#tail"
     click diff "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#diff"
     click grep "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#grep"
+    click cut "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#cut"
+    click wc "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#wc"
 ```
 
 ### cat
@@ -232,6 +238,16 @@ Exibe o conteúdo de um arquivo.
 
 ```shell
 cat /Users/jppreti/Downloads/abc.txt
+```
+
+O comando `cat` tem vários propósitos: pode ser utilizado para criar um arquivo, copiar o conteúdo de um arquivo para outro arquivo e mais.
+
+### more
+
+Comando similar ao `cat` , já que exibe o conteúdo de um arquivo. A única diferença é que no caso de arquivos cujo conteúdo não caiba todo na tela, o comando `more`permite exibir o conteúdo na forma de rolagem para que possa ir visualizando o conteúdo de acordo com a interação do usuário.
+
+```shell
+more /Users/jppreti/Downloads/abc.txt
 ```
 
 ### vim
@@ -276,24 +292,48 @@ grep chown comandosbasicos.txt
 
 Procura pela palavra `chwon` no arquivo comandosbasicos.txt. Linhas que contêm a palavra pesquisada serão mostradas por completo.
 
+### cut
+
+Permite selecionar colunas que se deseja exibir do conteúdo de um arquivo. O parâmetro `-d` permite definir o limitador das colunas e o parâmetro `-f` permite especificar quais colunas deseja exibir:
+
+```shell
+cut -d: -f1,6 /ect/passwd
+```
+
+Exibe as colunas `1` e `6` do arquivo `passwd` que possui como separador o `:`. Nesse exemplo será exibido o `nome` (coluna 1) dos usuários do sistema e o diretório `home` (coluna 2) de cada usuário.
+
+### wc
+
+Contabiliza linhas, palavras e caracteres de um arquivo.
+
+```shell
+wc arquivo.txt
+```
+
 ## Permissões
 
 ```mermaid
 flowchart TD
     Permissões-->sudo
+    Permissões-->su
     Permissões-->adduser
+    Permissões-->passwd
     Permissões-->deluser
     Permissões-->usermod
     Permissões-->chown
     Permissões-->chmod
     Permissões-->whoami
+    Permissões-->id
     click sudo "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#sudo"
+    click su "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#su"
     click adduser "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#adduser"
+    click passwd "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#passwd"
     click deluser "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#deluser"
     click usermod "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#usermod"
     click chmod "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#chmod"
     click chown "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#chown"
     click whoami "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#whoami"
+    click id "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#id"
 ```
 
 ### sudo
@@ -309,6 +349,22 @@ sudo apt update
 sudo apt upgrade 
 sudo apt install ansible -y
 sudo cat /temp/
+```
+
+### su
+
+Fornece acesso administrativo para outro usuário. Em outras palavras, permite o acesso ao shell para outro usuário, realizando outro login.
+
+```shell
+su jppreti
+```
+
+### passwd
+
+Permite mudar a senha do usuário:
+
+```shell
+passwd
 ```
 
 ### usermod
@@ -343,6 +399,14 @@ chown jppreti arquivo.txt
 
 Comando que exibe qual é o usuário logado.
 
+### id
+
+Comando utilizado para exibir do usuário logado seu código de usuário e dos grupos a que pertence.
+
+```shell
+id
+```
+
 ## Disco
 
 ```mermaid
@@ -376,9 +440,11 @@ flowchart TD
     Processos-->top
     Processos-->ps
     Processos-->kill
+    Processos-->service
     click top "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#top"
     click ps "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#kill"
     click kill "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#kill"
+    click service "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#service"
 ```
 
 ### top
@@ -402,6 +468,14 @@ kill 1234
 ```
 
 Encerra o processo de código 1234.
+
+### service
+
+Comando utilizado para gerenciar serviços disponíveis na máquina. É possível iniciar um serviço, parar e reiniciar além de poder listar todos os serviços disponíveis:
+
+```shell
+service --status-all
+```
 
 ## Rede
 
