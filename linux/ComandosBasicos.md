@@ -31,6 +31,7 @@ flowchart TD
     Sist.Arquivos-->pwd
     Sist.Arquivos-->touch
     Sist.Arquivos-->mlocate
+    Sist.Arquivos-->tree
     click mkdir "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#mkdir"
     click cd "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#cd"
     click ls "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#ls"
@@ -40,6 +41,7 @@ flowchart TD
     click pwd "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#pwd"
     click touch "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#touch"
     click mlocate "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#mlocate"
+    click tree "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#tree"
 ```
 
 ### ls
@@ -207,6 +209,18 @@ mlocate -i laboratorio*programacao
 ```
 
 Encontra qualquer arquivo que tenha as palavras `laboratorio` e `programacao`, não importando se as letras são maiúsculas ou minúsculas.
+
+
+
+### tree
+
+Localiza arquivos e exibe o caminho da localização em um formato hierárquico:
+
+```bash
+tree -P '*.c' --prune
+```
+
+Localiza todos os arquivos com extensão `.c` e exibe em formato hierárquico a localização desses arquivos.
 
 ## Texto
 
