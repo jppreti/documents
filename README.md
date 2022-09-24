@@ -13,7 +13,9 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
   - [Nix Package Manager](https://github.com/jppreti/documents/blob/main/linux/NixPackage.md)
 
 - C
-  
+
+  - [Visualizando Binário](https://github.com/jppreti/documents/blob/main/c/VisualizandoBinario.md)
+
   - Estrutura de Dados
 
     - [Ponteiros](https://github.com/jppreti/documents/blob/main/c/datastructure/Ponteiros.md)
