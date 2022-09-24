@@ -18,8 +18,6 @@ Recomendo pesquisar sobre:
 
 [Oh My Zsh](https://ohmyz.sh/): framework para gerenciar as configurações do shel Zsh, com diversos plugins e temas.
 
-
-
 # Instalando o Zsh
 
 Para instalar o Zsh:
@@ -86,6 +84,16 @@ Para pesquisar arquivos e pastas, pressione as teclas **CTRL + T + nome do arqu
 
 Digite `**` e pressione **TAB** duas vezes para listar todos os arquuivos e filtrar.
 
+### k
+
+Permite visualizar tamanho de arquivos e status git.
+
+Para instalar:
+
+```bash
+git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+```
+
 ## Ativando os plugins
 
 Para ativar os plugins instalados faz-se necessário editar o arquivo **~/.zshrc** e editar a linha sobre plugins com a lista de plugins desejados:
@@ -95,5 +103,3 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf)
 ```
 
 Após salvar o arquivo basta encerrar o terminal e abrir novamente para ver aplicadas as novas configurações.
-
-
