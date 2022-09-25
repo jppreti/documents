@@ -556,11 +556,13 @@ flowchart TD
     Util-->history
     Util-->man
     Util-->clear
+    Util-->bc
     Util-->keycuts
     click uname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#uname"
     click history "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#history"
     click man "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#man"
     click clear "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#dicas"
+    click bc "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#bc"
     click keycuts "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#dicas"
 ```
 
@@ -582,6 +584,23 @@ Está em dúvida sobre como usar um comando, use `man` (manual) para obter ajuda
 
 ```shell
 man tail
+```
+
+### bc
+
+Calculadora.
+
+```shell
+expr 20 + 5
+```
+ou
+```shell
+bc
+```
+ou
+```shell
+echo '20 + 5' | bc
+echo '20 \* 5' | bc
 ```
 
 Apresenta ajuda sobre como utilizar o comando `tail`.

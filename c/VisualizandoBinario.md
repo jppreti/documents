@@ -44,10 +44,18 @@ od arquivo
 A leitura é muito difícil, se você quiser entender o que um arquivo binário executável faz, é melhor visualizá-lo de uma maneira que mostre a linguagem assembly:
 
 ```bash
-objdump -d arquivo_executável
+objdump -D arquivo_executável
 ```
 
 O `objdump` é um disassembler, ele lê o conteúdo binário e converte seu conteúdo de volta para a linguagem de montagem.
+
+- `objdump -f`: informações relacionadas aos cabeçalhos de arquivo do arquivo;
+- `objdump -p`: conteúdo do cabeçalho de arquivo do arquivo;
+- `objdump -h`: todas as informações dos cabeçalhos de seções;
+- `objdump -x`: todas as informações de todos os cabeçalhos;
+- `objdump -d`: conteúdo do montador de seções executáveis;
+- `objdump -D`: conteúdo do montador de todas as seções;
+- `objdump -s`: todo o conteúdo de todas as seções.
 
 O comando `strings` do Linux imprime as strings de caracteres imprimíveis do arquivo, o que pode facilitar a leitura:
 
