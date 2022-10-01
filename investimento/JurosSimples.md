@@ -8,8 +8,9 @@ Sua fórmula é expressa por:
 
 Por exemplo, o acréscimo de um valor de **R$ 1.000,00** aplicando um juros simples de **10%** é igual a **R$ 100,00** `(1000*10/100)`.
 
-A calculadora abaixo vai te ajudar nas simulações. Nesse caso a calculadora já está somando o acréscimo ao principal (valor futuro).
+Crie um arquivo HTML com o código abaixo para te ajudar nas simulações. Nesse caso a calculadora já está somando o acréscimo ao principal (valor futuro).
 
+```html
 <script type="text/javascript">
     function calcJurosSimples() {
         var principal = document.getElementById("txtPrincipal").value;
@@ -19,10 +20,12 @@ A calculadora abaixo vai te ajudar nas simulações. Nesse caso a calculadora j�
         pRes.innerHTML = "R$ " + res.toFixed(2);
     }
 </script>
+
 <p>Principal: (R$)</p><input type="number" id="txtPrincipal"><br>
 <p>Juros: (%)</p><input type="number" id="txtJuros"><br>
 <button id="btnCalcularSimples" onclick="calcJurosSimples();">Calcular</button><br>
 <p id="pResultado"></p>
+```
 
 ## Calculando o Rendimento
 
@@ -38,8 +41,9 @@ Portanto o juros (**rendimento**) foi de **7,2%** em **6 meses**:
 
 `(1072 / 1000 - 1) * 100`
 
-A calculadora abaixo vai te ajudar nas simulações para descobrir o rendimento.
+Crie um arquivo HTML com o código abaixo e use a calculadora para te ajudar nas simulações para descobrir o rendimento.
 
+```html
 <script type="text/javascript">
     function calcRendimento() {
         var inicial = document.getElementById("txtValorInicial").value;
@@ -49,10 +53,12 @@ A calculadora abaixo vai te ajudar nas simulações para descobrir o rendimento.
         pRes.innerHTML = res.toFixed(2) + " %";
     }
 </script>
+
 <p>Valor Inicial: (R$)</p><input type="number" id="txtValorInicial"><br>
 <p>Valor Recebido: (R$)</p><input type="number" id="txtValorRecebido"><br>
 <button id="btnCalcularRendimento" onclick="calcRendimento();">Calcular</button><br>
 <p id="pResultado2"></p>
+```
 
 ## Calculando com Períodos
 
@@ -66,8 +72,9 @@ Nesse caso o **acréscimo** foi de **R$ 270,00** em **3 anos***:
 
 **Trataremos os juros compostos em outro artigo.**
 
-Use o simulador abaixo para calcular com períodos:
+Crie um arquivo HTML com o código abaixo e use o simulador para calcular com períodos:
 
+```html
 <script type="text/javascript">
     function calcJurosPeriodo() {
         var principal = document.getElementById("txtPrincipal3").value;
@@ -78,11 +85,13 @@ Use o simulador abaixo para calcular com períodos:
         pRes.innerHTML = "R$ " + res.toFixed(2);
     }
 </script>
+
 <p>Principal: (R$)</p><input type="number" id="txtPrincipal3"><br>
 <p>Juros: (%)</p><input type="number" id="txtJuros3"><br>
 <p>Período: </p><input type="number" id="txtPeriodo3"><br>
 <button id="btnCalcularPeriodo" onclick="calcJurosPeriodo();">Calcular</button><br>
 <p id="pResultado3"></p>
+```
 
 ### Taxa vs Período
 
@@ -120,8 +129,9 @@ Nesse caso levariam **150 meses** para conseguir **R$ 2.500,00** com uma apl
 
 `(2500 - 1000) / (1 / 100 * 1000)`
 
-Faça suas simulações utilizando a calculadora abaixo:
+Faça suas simulações criando um arquivo HTML e utilizando o código abaixo:
 
+```html
 <script type="text/javascript">
     function calcPeriodo() {
         var principal = document.getElementById("txtPrincipal4").value;
@@ -132,10 +142,12 @@ Faça suas simulações utilizando a calculadora abaixo:
         pRes.innerHTML = res.toFixed(2);
     }
 </script>
+
 <p>Principal: (R$)</p><input type="number" id="txtPrincipal4"><br>
 <p>Juros: (%)</p><input type="number" id="txtJuros4"><br>
 <p>Valor Futuro: (R$)</p><input type="number" id="txtValorFuturo4"><br>
 <button id="btnCalcularPeriodo2" onclick="calcPeriodo();">Calcular</button><br>
 <p id="pResultado4"></p>
+```
 
 Agora podemos dar um passo mais avançado e conhecer os [Juros Compostos](), muito utilizado por investidores.

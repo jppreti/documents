@@ -71,3 +71,56 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
     
     - [Google Colab](https://colab.research.google.com/)
 
+- Educação Financeira
+  
+  - Introdução
+
+    - [Por onde eu começo?](https://github.com/jppreti/documents/blob/main/investimento/PorOndeComeco.md)
+
+    - [Por onde eu começo? Parte 2](https://github.com/jppreti/documents/blob/main/investimento/PorOndeComeco2.md)
+
+    - [A importância de um caixa de investimento](https://github.com/jppreti/documents/blob/main/investimento/CaixaInvestimento.md)
+
+    - [Indicador econômico](https://github.com/jppreti/documents/blob/main/investimento/IndicadorEconomico.md)
+
+    - [Tipos de investimento](https://github.com/jppreti/documents/blob/main/investimento/TiposInvestimento.md)
+
+    - [Como eu comecei a investir](https://github.com/jppreti/documents/blob/main/investimento/ComoComecei.md)
+
+    - [Abrindo conta em corretora(s)](https://github.com/jppreti/documents/blob/main/investimento/Corretoras.md)
+
+    - [Qual é o meu perfil de investidor?](https://github.com/jppreti/documents/blob/main/investimento/PerfilInvestidor.md)
+
+    - [Entendendo o gráfico de candlestick](https://github.com/jppreti/documents/blob/main/investimento/GraficoCandlestick.md)    
+
+  - Matemática Financeira
+    
+    - [Juros simples](https://github.com/jppreti/documents/blob/main/investimento/JurosSimples.md)
+
+    - [Juros compostos](https://github.com/jppreti/documents/blob/main/investimento/JurosCompostos.md)
+
+    - [HP 12C](https://github.com/jppreti/documents/blob/main/investimento/HP12C.md)
+
+    - [Por que é importante calcular o preço médio?](https://github.com/jppreti/documents/blob/main/investimento/PrecoMedio.md)
+
+  - Economia Doméstica
+
+    - [Quanto custa um carro?](https://github.com/jppreti/documents/blob/main/investimento/CustoCarro.md)
+
+  - Fundo de Investimento
+
+    - [Previdência privada](https://github.com/jppreti/documents/blob/main/investimento/PrevidenciaPrivada.md)
+
+    - [Entendendo os dados dos fundos de investimento](https://github.com/jppreti/documents/blob/main/investimento/FundosInvestimentoPorOndeComeco.md)
+
+    - [Analisando fundos de investimento](https://github.com/jppreti/documents/blob/main/investimento/FundosInvestimentoAnalise.md)
+
+  - Fundos de Investimento Imobiliário (FII)
+
+    - [10 vantagens dos fundos imobiliários](https://github.com/jppreti/documents/blob/main/investimento/VantagensFII.md)
+
+    - [Tipos de fundos imobiliários](https://github.com/jppreti/documents/blob/main/investimento/TiposFII.md)
+
+    - [Buscando informações sobre FIIs](https://github.com/jppreti/documents/blob/main/investimento/.md)
+
+    - [Conhecendo as operações do Home Broker](https://github.com/jppreti/documents/blob/main/investimento/OperacoesHomeBroker.md)
