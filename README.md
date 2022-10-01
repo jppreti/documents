@@ -8,6 +8,8 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
 
   - [Melhorando o Terminal](https://github.com/jppreti/documents/blob/main/linux/Terminal.md)
 
+  - [Git](https://github.com/jppreti/documents/blob/main/linux/Git.md)
+
   - [Docker](https://github.com/jppreti/documents/blob/main/linux/Docker.md)
 
   - [Nix Package Manager](https://github.com/jppreti/documents/blob/main/linux/NixPackage.md)
@@ -27,8 +29,12 @@ Documentos acerca de diversos assuntos tratados em sala de aula.
     - [Lista Duplamente Ligada](https://github.com/jppreti/documents/blob/main/c/datastructure/DoublyLinkedList.md)
     
     - [Lista Generalizada](https://github.com/jppreti/documents/blob/main/c/datastructure/GeneralizedLinkedList.md)
+
+    - [Autocomplete](https://github.com/jppreti/documents/blob/main/c/datastructure/Autocomplete.md)    
     
     - [Tabela Hash](https://github.com/jppreti/documents/blob/main/c/datastructure/HashTable.md)
+
+    - [Gráfico de Espalhamento](https://github.com/jppreti/documents/blob/main/c/datastructure/GraficoEspalhamento.md)    
     
     - [Blockchain](https://github.com/jppreti/documents/blob/main/c/datastructure/Blockchain.md)
     
