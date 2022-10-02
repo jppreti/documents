@@ -120,16 +120,16 @@ Abaixo apreseno alguns comandos básicos para começar a explorar essa ferrament
 
 Comando principal = `CTRL + b` representado de agora em diante por`^b`.
 
-`^b + c` = Nova Janela
-`^b + "` = Modo Horizontal
-`^b + %` = Modo Vertical
-`^b + d` = Detached
-`tmux a -t ID_SESSAO` para *attach* novamente a sessão que foi *detached*
-Dois desenvolvedores podem "atachar" a mesma sessão para cada um ver o que o outro está fazendo.
-`^b + $` = Renomeia a sessão
-`^b + .` = Renomeia a janela
-`^b + z` = Maximiza ou Restaura a janela atual
-`^b + w` = Modo interativo para navegar entre as sessões e janelas
-`tmux new -s NOME_SESSAO -d` = Cria uma sessão sem precisar se conectar a ela
-`tmux kill-session -t NOME_SESSAO` = Encerra uma sessão específica
-`tmux kill-server` = Encerra todas as sessões
+- `^b + c` = Nova Janela
+- `^b + "` = Modo Horizontal
+- `^b + %` = Modo Vertical
+- `^b + d` = Detached
+- `tmux a -t ID_SESSAO` para *attach* novamente a sessão que foi *detached*
+- Dois desenvolvedores podem "atachar" a mesma sessão para cada um ver o que o outro está fazendo.
+-`^b + $` = Renomeia a sessão
+- `^b + .` = Renomeia a janela
+- `^b + z` = Maximiza ou Restaura a janela atual
+- `^b + w` = Modo interativo para navegar entre as sessões e janelas
+- `tmux new -s NOME_SESSAO -d` = Cria uma sessão sem precisar se conectar a ela
+- `tmux kill-session -t NOME_SESSAO` = Encerra uma sessão específica
+- `tmux kill-server` = Encerra todas as sessões
