@@ -103,3 +103,33 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf)
 ```
 
 Após salvar o arquivo basta encerrar o terminal e abrir novamente para ver aplicadas as novas configurações.
+
+# TMUX - Multiplexador
+
+`tmux` é um multiplexador de terminal de código aberto para sistemas operacionais do tipo Unix. Ele permite que várias sessões de terminal sejam acessadas simultaneamente em uma única janela. É útil para executar mais de um programa de linha de comando ao mesmo tempo.
+
+Para instalar:
+
+```bash
+sudo apt install tmux
+```
+
+Abaixo apreseno alguns comandos básicos para começar a explorar essa ferramenta muito útil:
+
+`tmux ls` = Lista todas as sessões abertas
+
+Comando principal = `CTRL + b` representado de agora em diante por`^b`.
+
+`^b + c` = Nova Janela
+`^b + "` = Modo Horizontal
+`^b + %` = Modo Vertical
+`^b + d` = Detached
+`tmux a -t ID_SESSAO` para *attach* novamente a sessão que foi *detached*
+Dois desenvolvedores podem "atachar" a mesma sessão para cada um ver o que o outro está fazendo.
+`^b + $` = Renomeia a sessão
+`^b + .` = Renomeia a janela
+`^b + z` = Maximiza ou Restaura a janela atual
+`^b + w` = Modo interativo para navegar entre as sessões e janelas
+`tmux new -s NOME_SESSAO -d` = Cria uma sessão sem precisar se conectar a ela
+`tmux kill-session -t NOME_SESSAO` = Encerra uma sessão específica
+`tmux kill-server` = Encerra todas as sessões
