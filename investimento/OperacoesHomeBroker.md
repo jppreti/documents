@@ -58,7 +58,7 @@ Não se preocupe em achar que você estará pagando mais caro por isso (675 cota
 
 Ao **clicar na linha** da XP que está vendendo **48 cotas a R$ 107,50**, perceba que a ferramenta já preenche a ordem de compra com uma quantidade de **60 cotas ao preço de R$ 107,50**. Veja o resultado abaixo:
 
-![](OrdemVenda.png)
+![](https://github.com/jppreti/documents/blob/main/investimento/images/OrdemVenda.png)
 
 Ordem de Venda
 
