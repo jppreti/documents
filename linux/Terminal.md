@@ -16,7 +16,7 @@ Recomendo pesquisar sobre:
 
 [Zsh](https://zsh.sourceforge.io/): interpretador de comando para shell;
 
-[Oh My Zsh](https://ohmyz.sh/): framework para gerenciar as configurações do shel Zsh, com diversos plugins e temas.
+[Oh My Zsh](https://ohmyz.sh/): framework para gerenciar as configurações do shell Zsh, com diversos plugins e temas.
 
 # Instalando o Zsh
 
