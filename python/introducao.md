@@ -440,7 +440,7 @@ O uso de lambda permite escrever um código mais conciso e traz como vantagem po
 
 ```python
 precos = [100, 200, 300, 400]
-impostos = list(map(lambda x: x * 0.3, valores))
+impostos = list(map(lambda x: x * 0.3, precos))
 print(impostos)
 ```
 
