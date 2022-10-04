@@ -412,9 +412,39 @@ clientes = {
     '123.456.789-00':'Claudia'
 }
 print(clientes['222.222.222-22'])
+
 ```
 
-# 8. Arquivo
+# 8. Funções
+
+Funções possibilitam a criação de algoritmos modularizados, particionando uma grande solução em um cojunto de pequenas soluções.
+
+Exemplo de uma função comum:
+
+```python
+def calcular_imposto(preco):
+    return preco * 0.3
+
+valor = 1000
+print(calcular_imposto(valor))
+```
+
+Exemplo da mesma função por meio de expressão lambda:
+
+```python
+calcular_imposto2 = lambda x: x * 0.3
+print(calcular_imposto2(valor))
+```
+
+O uso de lambda permite escrever um código mais conciso e traz como vantagem poder passar essas expressões como um parâmetro para outra função. Por exemplo, aplicar uma função em um conjunto de valores presentes em uma lista:
+
+```python
+precos = [100, 200, 300, 400]
+impostos = list(map(lambda x: x * 0.3, valores))
+print(impostos)
+```
+
+# 9. Arquivo
 
 Para abrir um arquivo, o Python possui a função `open()`. Ela recebe dois parâmetros: o primeiro é o nome do arquivo a ser aberto e o segundo é o modo que queremos trabalhar com esse arquivo – se queremos ler ou escrever. O modo é passado através de uma string: `"w"` (write) para escrita, `"r"` (read) para leitura e `"a"` (append) para escrita em arquivo já existente.
 
@@ -442,6 +472,6 @@ with open('usuarios.txt') as arquivo:
 
 `close()` não é mais necessário
 
-# 9. Exemplos
+# 10. Exemplos
 
 [Cadastro de Usuário com Lista e Arquivo](https://drive.google.com/open?id=1aG9Pt8x5sn7t1JMYOBsIqdSxhUy9mC16)
