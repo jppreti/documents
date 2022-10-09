@@ -18,6 +18,13 @@ Recomendo pesquisar sobre:
 
 [Oh My Zsh](https://ohmyz.sh/): framework para gerenciar as configurações do shell Zsh, com diversos plugins e temas.
 
+Vamos aqui configurar o seguinte conjunto para nosso terminal:
+
+shell: **zsh**
+plugin manager: **oh-my-zsh**
+prompt: **powerlevel10k**
+terminal multiplexer: **tmux**
+
 # Instalando o Zsh
 
 Para instalar o Zsh:
@@ -59,7 +66,7 @@ Vamos abordar alguns plugins famosos.
 Plugin que destaca em cores se o comando digitado está correto ou incorreto. Para instalar:
 
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions \$ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 ```
 
 ### zsh-autosuggestions
@@ -104,6 +111,19 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf)
 
 Após salvar o arquivo basta encerrar o terminal e abrir novamente para ver aplicadas as novas configurações.
 
+## Tema powerlevel10k
+
+ Clone o repositório dentro do diretório `~/.oh-my-zsh/themes`:
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
+```
+ 
+ Para habilitar o tema, basta editar o arquivo `.zshrc`:
+
+ `ZSH_THEME=powerlevel10k/powerlevel10k`
+
+
 # TMUX - Multiplexador
 
 `tmux` é um multiplexador de terminal de código aberto para sistemas operacionais do tipo Unix. Ele permite que várias sessões de terminal sejam acessadas simultaneamente em uma única janela. É útil para executar mais de um programa de linha de comando ao mesmo tempo.
@@ -133,3 +153,11 @@ Comando principal = `CTRL + b` representado de agora em diante por`^b`.
 - `tmux new -s NOME_SESSAO -d` = Cria uma sessão sem precisar se conectar a ela
 - `tmux kill-session -t NOME_SESSAO` = Encerra uma sessão específica
 - `tmux kill-server` = Encerra todas as sessões
+
+# Terminal para Cientista de Dados
+
+Uma configuração de terminal interessante para quem precisa manipular dados estruturados no shell vale a pena testar o conjunto:
+
+shell: **nushell**
+prompt: **starship**
+terminal multiplexer: **zellij**
