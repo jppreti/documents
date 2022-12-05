@@ -472,6 +472,132 @@ with open('usuarios.txt') as arquivo:
 
 `close()` não é mais necessário
 
-# 10. Exemplos
+# 10. Exceções
+Exceções permitem que o programador capture situações indesejadas e as trate para impedir que o programa seja interrompido abruptamente. Por exemplo, tratamento de erros ou de dados inválidos fornecidos pelo usuário.
+
+Temos basicamente 5 palavras reservadas para o tratamento de exceções:
+- `try`: permite definir o bloco de instruções do programa que podem lançar exceções;
+- `except`: captura a exceção ocorrida;
+- `else`: executado caso nenhuma exceção ocorra;
+- `finally`: bloco que sempre é executado independentemente de ocorrer ou não uma exceção;
+- `raise`: lança uma exceção. Utilizada pelo programador quando deseja forçar a ocorrência de uma exceção.
+
+Vejamos abaixo o exemplo de um programa que realiza a divisão de dois números inteiros com tratamento de exceção:
+
+```python
+try:
+    x = int(input('Digite um valor numérico: '))
+    y = int(input('Digite outro valor numérico: '))
+    resultado = x/y
+    print(resultado)
+except ValueError: # śo ira ocorrer em caso de valores não inteiros
+    print('Eita usuário, vc digitou um valor que não é um inteiro, preste atenção!!!')
+except ZeroDivisionError:# só irá ocorrer se y for igual a zero (0)
+    print('Não pode haver divisão de um número por zero (0)!')
+except Exception as exc:
+    print('Erro inesperado, contate o administrador do sistema! Veja os detalhes abaixo:')
+    print(exc)
+else: # só irá ocorrer se não houver nenhum na execução
+    print('Parabéns usuário, vc é demais, nao errou nada!!!')
+finally: # sempre irá ocorrer independentemente de errou ou sucesso
+    print('Fim do programa!')
+```
+
+O problema do exemplo acima é que percebemos que a exceção é capturada, mas o programa encerra, sem chance para o usuário corrigir o erro. No exemplo abaixo adaptamos o algoritmo anterior para que o usuário possa corrigir o erro.
+
+```python
+x = 0
+y = 0
+erro = True
+while erro == True:
+    try:
+        x = int(input('Digite um valor numérico para X: '))
+        erro = False
+    except ValueError:
+        print('Eita usuário, vc digitou um valor que não é um inteiro, preste atenção')
+        erro = True
+
+erro = True
+while erro == True:
+    try:
+        y = int(input('Digite um valor numérico para Y: '))
+        if y == 0:
+            raise Exception('Cara, não existe valor 0 para Y')
+        erro = False
+    except ValueError:
+        print('Eita usuário, vc digitou um valor que não é um inteiro, preste atenção')
+        erro = True
+    except Exception as exc:
+        print(exc)
+        erro = True
+try:
+    resultado = x/y
+except ZeroDivisionError:
+    print('Não pode haver divisão de um número por zero (0)!')
+else:
+    print(resultado)
+``` 
+
+# 11. Logging
+
+Logging é um recurso que nos permite documentar o que está ocorrendo durante a execução do sistema. Esse tipo de recurso é importante para que possa ser realizada uma auditoria no sistema e verificar o porque de determinadas situações terem ocorrido no sistema.
+
+O exemplo abaixo é uma adaptação do nosso programa da seção 10, que realiza a divisão de dois números inteiros:
+
+```python
+# https://realpython.com/python-logging/
+import logging
+
+logging.basicConfig(level=logging.DEBUG, filename='app.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+
+logging.info('Iniciando Programa de Divisão de 2 números')
+x = 0
+y = 0
+erro = True
+logging.debug(f'x = {x}')
+logging.debug(f'y = {y}')
+logging.debug(f'erro = {erro}')
+while erro == True:
+    try:
+        logging.info('Solicitando o valor de x para o usuário.')
+        x = int(input('Digite um valor numérico para X: '))
+        logging.debug(f'x = {x}')
+        erro = False
+    except ValueError:
+        logging.error('Exceção:', exc_info=True)
+        print('Eita usuário, vc digitou um valor que não é um inteiro, preste atenção')
+        erro = True
+        logging.debug(f'erro = {erro}')
+    logging.debug(f'erro = {erro}')
+
+erro = True
+logging.debug(f'erro = {erro}')
+while erro == True:
+    try:
+        logging.info('Solicitando o valor de y para o usuário')
+        y = int(input('Digite um valor numérico para Y: '))
+        logging.debug(f'y = {y}')
+        if y == 0:
+            raise Exception('Cara, não existe valor 0 para Y')
+        erro = False
+    except ValueError:
+        logging.error('Exceção:',exc_info=True)
+        print('Eita usuário, vc digitou um valor que não é um inteiro, preste atenção')
+        erro = True
+    except Exception as exc:
+        logging.error('Exceção:',exc_info=True)
+        print(exc)
+        erro = True
+try:
+    resultado = x/y
+    logging.debug(f'resultado = {resultado}')
+except ZeroDivisionError:
+    logging.error('Exceção:',exc_info=True)
+    print('Não pode haver divisão de um número por zero (0)!')
+else:
+    print(resultado)
+```
+
+# 12. Exemplos
 
 [Cadastro de Usuário com Lista e Arquivo](https://drive.google.com/open?id=1aG9Pt8x5sn7t1JMYOBsIqdSxhUy9mC16)
