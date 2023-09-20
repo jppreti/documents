@@ -16,6 +16,12 @@ Todos os processos em execução são organizados em Cgroups:
 systemctl status
 ```
 
+Todos os Cgroups ordenados por consumo de CPU, Memória e I/O:
+
+```shell
+systemd-cgtop
+```
+
 ## 2.1. Slice
 
 O `systemd` é um sistema de inicialização, utilizado pela maioria das distribuições linux. Na prática, o systemd assume o controle assim que o kernel é ativado pelo gerenciador de *bootloader* (Grub, tipicamente). A partir daí, são carregados todos os dispositivos (placa de rede, processador gráfico etc.) e processos que se iniciam com o sistema — estes são identificados pelo PID (*process identifier*).
@@ -36,6 +42,8 @@ Criar um `shell` dentro de um cgroup configurado com `jp.slice`:
 ```shell
 systemd-run --slice=jp.slice --uid=jppreti --shell
 ```
+
+Para maiores informações sobre parâmetros dos recursos configuráveis leia [Resource Control Unit Settings](https://www.freedesktop.org/software/systemd/man/systemd.resource-control.html).
 
 ## 2.2. Unshare
 
