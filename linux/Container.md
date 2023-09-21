@@ -170,3 +170,15 @@ cd /tmp/hello
 ./hello
 ```
 
+Uma alternativa ao `docker` é o `podman` que não precisa de um _daemon_ ativo. É possível até mesmo utilizar uma forma mais direta de criar containers utilizando um recurso nativo do SO linux, por meio de `runc`:
+
+```shell
+runc spec
+runc run nome_do_container
+```
+
+Na figura abaixo podemos visualizar as camadas utilizadas pelas ferramentas de criação e gerenciamento de containers:
+
+![Containers Tools](https://fjclub.s3-eu-west-1.amazonaws.com/blog_images/user.png)
+
+Para maiores informações leia [Containers Tools](https://mkdev.me/posts/the-tool-that-really-runs-your-containers-deep-dive-into-runc-and-oci-specifications).
