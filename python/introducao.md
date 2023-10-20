@@ -446,7 +446,15 @@ print(impostos)
 
 # 9. Arquivo
 
-Para abrir um arquivo, o Python possui a função `open()`. Ela recebe dois parâmetros: o primeiro é o nome do arquivo a ser aberto e o segundo é o modo que queremos trabalhar com esse arquivo – se queremos ler ou escrever. O modo é passado através de uma string: `"w"` (write) para escrita, `"r"` (read) para leitura e `"a"` (append) para escrita em arquivo já existente.
+Para abrir um arquivo, o Python possui a função `open()`. Ela recebe dois parâmetros: o primeiro é o nome do arquivo a ser aberto e o segundo é o modo que queremos trabalhar com esse arquivo – se queremos ler ou escrever. O modo é passado através de uma string: `"w"` (write) para escrita, `"r"` (read) para leitura e `"a"` (append) para escrita em arquivo já existente. Existem outros modos de abertura de arquivo, segue lista:
+
+|**Char**   |**Significado**|
+| --        | -----------------------------------------------   |
+|x          |Escrita. Retorna um erro caso o arquivo já exista  |
+|b          |Modo binário                                       |
+|t          |Modo texto                                         |
+|+          |Combinando modos, exemplo 'r+b', leitura de binário|
+
 
 Vejamos abaixo exemplo de criação e depois leitura de um arquivo texto:
 
