@@ -491,6 +491,14 @@ Comando utilizado para gerenciar serviços disponíveis na máquina. É possíve
 service --status-all
 ```
 
+### nohup
+
+Torna um comando imune ao hangup signal. Um comando executado com nohup continua executando mesmo que a sessão do terminal encerre ou que o usuário deslogue. A saída é redirecionada para um arquivo de log (nohup.out) por padrão.
+
+```shell
+nohup projecteur &
+```
+
 ## Rede
 
 ```mermaid
