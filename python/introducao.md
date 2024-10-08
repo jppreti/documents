@@ -230,6 +230,15 @@ texto = 'Meu nome é {} e tenho {} anos.'
 print(texto.format(nome,idade))
 ```
 
+### 3.5.1. eval
+
+Podemos também requisitar para o python interpretar uma string como um comando em python por meio do comando `eval`:
+
+```python3
+questao = int(input('Questão a ser executada: '))
+eval(f'q{questao}()')
+```
+
 # 4. Operadores
 
 ## 4.1. Aritméticos
@@ -283,6 +292,8 @@ print(texto.format(nome,idade))
 
 # 5. Estrutura de Condição
 
+## 5.1. if elif else
+
 ```python
 nota = 7
 if nota >= 7:
@@ -291,6 +302,17 @@ elif nota >= 5:
     print('Recuperação')
 else:
     print('Reprovado')
+```
+
+## 5.2. match
+
+```python
+questao = int(input('Questão a ser executada: '))
+match questao:
+    case 1:
+        q1()
+    case _:
+        print('Questão inválida!')
 ```
 
 # 6. Laços de Repetição
