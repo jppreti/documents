@@ -324,6 +324,65 @@ Contabiliza linhas, palavras e caracteres de um arquivo.
 wc arquivo.txt
 ```
 
+### sed
+
+Para processamento de texto, como buscar e substituir, inserção e exclusão.
+
+Por exemplo, para substituir a primeira ocorrência em cada linha da palavra unix para linux:
+
+```shell
+sed 's/unix/linux/' arquivo.txt
+```
+
+Ou substituir todas as ocorrências (global) da palavra unix para linux:
+
+```shell
+sed 's/unix/linux/g' arquivo.txt
+```
+
+Imprimir de cada palavra a primeira letra entre parênteses:
+
+```shell
+echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
+```
+
+Excluir uma linha em particular do arquivo:
+
+```shell
+sed '5d' arquivo.txt
+```
+
+Excluir a última linha
+
+```shell
+sed '$d' arquivo.txt
+```
+
+Excluir linhas de x a y:
+
+```shell
+sed '3,6d' arquivo.txt
+```
+
+Excluir tudo a partir de uma linha:
+
+```shell
+sed '3,$d' arquivo.txt
+```
+
+Excluir linha que combine com um padrão:
+
+```shell
+sed '/abc/d' arquivo.txt
+```
+
+Inserir linha antes ou depois de uma linha:
+
+```shell
+sed '3i\new text' filename
+sed '3a\new text' filename
+```
+
 ## Permissões
 
 ```mermaid
