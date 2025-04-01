@@ -222,6 +222,14 @@ tree -P '*.c' --prune
 
 Localiza todos os arquivos com extensão `.c` e exibe em formato hierárquico a localização desses arquivos.
 
+### which
+
+Exibe a localização de um comando Linux:
+
+```bash
+which tree
+```
+
 ## Texto
 
 ```mermaid
