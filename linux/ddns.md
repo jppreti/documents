@@ -47,3 +47,8 @@ Para verificar o status do serviço ddclient:
 sudo ddclient -daemon=0 -verbose
 ```
 
+Lembre-se de liberar as portas desejadas no firewall:
+
+```shell
+sudo ufw allow 8000/tcp
+```
