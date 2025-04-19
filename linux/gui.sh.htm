@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "<font size=30px color=red>"
+if [ $NOME ]; then
+  echo "Olá $NOME"
+else
+  echo "Olá Mundo"
+fi
+echo "<br><br>"
+echo "<a href=./gui.sh.htm?NOME=João>João</a>"
+echo "<br><br>"
+echo "<a onclick=\"_run('kate')\">Editor de Texto</a>"
