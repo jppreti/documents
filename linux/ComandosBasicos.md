@@ -46,7 +46,7 @@ flowchart TD
 
 ### ls
 
-Lista o conteúdo de um diretório
+Lista o conteúdo de um diretório:
 
 `ls`
 
