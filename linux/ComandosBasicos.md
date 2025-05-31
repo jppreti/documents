@@ -46,7 +46,7 @@ flowchart TD
 
 ### ls
 
-Lista o conteúdo de um diretório
+Lista o conteúdo de um diretório:
 
 `ls`
 
@@ -652,7 +652,7 @@ Outras comandos SSH importantes que vão além do cliente SSH.
 Informa qual seu host/network (da sua rede), se adicionar -I ao final, exibirá o endereço IP da sua rede.
 
 ```shell
-hostname -I
+hostname -i
 ```
 
 ### ifconfig
@@ -666,6 +666,52 @@ Para consultar endereço http ou ver os passos da comunicação http:
 ```shell
 curl url --trace-ascii dump.txt
 ```
+
+### ip addr
+
+Comando para exibir informações sobre as interfaces de rede:
+
+### ip route
+
+Exibe a tabela de rotas.
+
+### route -n
+
+Exibe as rotas ativas
+
+Para adicionar uma rota estática:
+
+```shell
+route add -net 192.168.1.0 netmask 255.255.255.0 gw 192.168.1.1
+```
+
+### ethtool eth0
+
+Mostrar a velocidade da interface, se o cabo está conectado e em que modo está operando.
+
+### ethtool -S eth0
+
+Exibe as estatísticas de RX e TX da interface.
+
+### ethtool -p eth0 60
+
+Deixar a interface piscando para podermos identificar qual é a interface fisicamente, 60 equivale a 60 segundos.
+
+### ethtool -s eth0 speed 100 duplex
+
+Manipular a velocidade da interface e o modo de negociação, half-duplex ou full-duplex.
+
+### ethtool -i eth0
+
+Verificar informações sobre o driver da interface de rede
+
+### /etc/resolv.conf
+
+Armazena as configurações de DNS.
+
+### /etc/hosts
+
+Associa endereços IP a hostnames.
 
 ## Utilitários
 

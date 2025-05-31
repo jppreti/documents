@@ -1,6 +1,6 @@
 # Materiais de Auxílio
 
-Documentos acerca de diversos assuntos tratados em sala de aula.
+Documentos acerca de diversos assuntos tratados em aula.
 
 - Linux
   
