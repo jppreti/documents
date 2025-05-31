@@ -230,6 +230,42 @@ Exibe a localização de um comando Linux:
 which tree
 ```
 
+### lsblk
+
+Para descobrir o tamanho das partições.
+
+### df
+
+Para descobrir espaço disponível e sistema de arquivos.
+
+```shell
+df -T
+```
+
+### vgdisplay
+
+Para mostrar o grupo de volumes da VM.
+
+### lvs, lvdisplay e lvscan
+
+Para exibir os volumes lógicos da VM.
+
+### lvextend
+
+Para extender a partição em 10G. Precisa da referência do grupo de volume e do volume lógico:
+
+```shell
+sudo lvextend -L +10G /dev/ubuntu-vg/ubuntu-lv
+```
+
+### resize2fs
+
+Utilizado depois do lvextend para redimensionar a partição com o novo espaço extendido.
+
+```shell
+sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+```
+
 ## Texto
 
 ```mermaid
@@ -622,6 +658,14 @@ hostname -I
 ### ifconfig
 
 Comando que exibe detalhes sobre as interfaces de rede e suas configurações da sua máquina.
+
+### curl
+
+Para consultar endereço http ou ver os passos da comunicação http:
+
+```shell
+curl url --trace-ascii dump.txt
+```
 
 ## Utilitários
 
