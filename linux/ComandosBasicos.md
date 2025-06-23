@@ -198,7 +198,7 @@ Para mover vários arquivos e diretórios, especifique o diretório de destino a
 mv arquivo1.txt arquivo2.txt /Desktop
 ```
 
-### mlocate
+### mlocate, find e fd
 
 Comando utilizado para localizar um arquivo. A opção `-i` faz com que ele ignore a diferença entre maiúsculas e minúsculas.
 
@@ -210,7 +210,19 @@ mlocate -i laboratorio*programacao
 
 Encontra qualquer arquivo que tenha as palavras `laboratorio` e `programacao`, não importando se as letras são maiúsculas ou minúsculas.
 
+É possível utilizar o comando `find` também:
 
+```shell
+find . -name arquivo.ext
+```
+
+Ou o comando `fd`:
+
+Localiza todas as extensões .py: 
+
+```shell
+fd -e py
+```
 
 ### tree
 
@@ -229,6 +241,20 @@ Exibe a localização de um comando Linux:
 ```bash
 which tree
 ```
+
+### trash
+
+Permite realizar a exclusão de arquivos de forma segura:
+
+```shell
+trash arquivo.ext
+```
+
+Para visualizar os arquivos da lixeira utilize `trash-list`.
+
+Para restaurar utilize `trash-restore`.
+
+Para esvaziar a lixeira utilize `trash-empty`.
 
 ### lsblk
 
@@ -264,6 +290,14 @@ Utilizado depois do lvextend para redimensionar a partição com o novo espaço 
 
 ```shell
 sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+```
+
+### ncdu
+
+Deseja verificar diretórios e arquivos que estão ocupando maior espaço em disco, utilize:
+
+```shell
+ncdu
 ```
 
 ## Texto
@@ -602,6 +636,20 @@ Torna um comando imune ao hangup signal. Um comando executado com nohup continua
 nohup projecteur &
 ```
 
+### time e timeout
+
+Deseja calcular o tempo de execução de um programa:
+
+```shell
+time ./script.sh
+```
+
+Deseja encerrar um processo após um determinado intervalo de tempo:
+
+```shell
+timeout 5s ping google.com
+```
+
 ## Rede
 
 ```mermaid
@@ -743,12 +791,18 @@ uname -a
 
 Comando que permite rever o histórico de comandos que você já exxecutou no linux.
 
-### man
+### man e tldr
 
 Está em dúvida sobre como usar um comando, use `man` (manual) para obter ajuda, por exemplo:
 
 ```shell
 man tail
+```
+
+Precisa de uma ajuda mais resumida com exemplos, use `tldr`:
+
+```shell
+tldr tail
 ```
 
 ### bc
