@@ -250,11 +250,20 @@ Permite realizar a exclusão de arquivos de forma segura:
 trash arquivo.ext
 ```
 
+
+
+
+
+
 Para visualizar os arquivos da lixeira utilize `trash-list`.
 
 Para restaurar utilize `trash-restore`.
 
 Para esvaziar a lixeira utilize `trash-empty`.
+
+### broot
+
+Permite navegar em pastas e arquivos de forma similar ao explorer de janela, bem como realizar buscas elaboradas
 
 ### lsblk
 
@@ -752,6 +761,60 @@ Manipular a velocidade da interface e o modo de negociação, half-duplex ou ful
 ### ethtool -i eth0
 
 Verificar informações sobre o driver da interface de rede
+
+### iftop
+
+Monitora o tráfego de rede:
+
+```bash
+iftop -i eth0
+```
+
+### mtr
+
+My traceroute combina ping e traceroute para exibir perda de pacotes e latência a cada salto.
+
+```bash
+mtr -rw google.com
+```
+
+### nmcli
+
+Fornece controle sobre suas conexões de rede, atua como gerenciador de rede (network manager):
+
+```bash
+nmcli device wifi list
+nmcli device wifi connect "WiFi-name" password "secretpass123"
+```
+
+Para visualizar as conexões salvas:
+
+```bash
+nmcli connection show
+```
+
+Para excluir um profile salvo:
+
+```bash
+nmcli connection delete "OldWiFi"
+```
+
+### dnstop
+
+Exibe o que está sendo buscado na Internet:
+
+```bash
+dnstop eth0
+```
+
+### hping3
+
+Realiza port scanning e flooding de pacotes que simula um ataque DoS:
+
+```bash
+hping3 -S -p 80 example.com
+hping3 -S -p 80 --flood 192.168.1.10
+```
 
 ### /etc/resolv.conf
 
