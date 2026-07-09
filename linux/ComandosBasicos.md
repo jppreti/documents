@@ -1,5 +1,5 @@
 # 1. Comandos Básicos em Linux
-
+a
 ```mermaid
 flowchart TD
     Linux["fab:fa-linux Linux"]-->Sist.Arquivos
@@ -275,6 +275,14 @@ Para descobrir espaço disponível e sistema de arquivos.
 
 ```shell
 df -T
+```
+
+### free
+
+Para descobrir a memória disponível.
+
+```shell
+free -h
 ```
 
 ### vgdisplay
@@ -617,6 +625,14 @@ top -u jppreti
 
 Exibe os processos em execução do usuário `jppreti`. Ao pressionar a letra `K` pode-se informar o número do processo (`PID`) que deseja encerrar.
 
+### pstree
+
+Exibe os processos e a relação de hierarquia entre eles:
+
+```shell
+pstree
+```
+
 ### kill
 
 Se você tem um programa que não está respondendo bem, você pode finalizá-lo manualmente pelo comando `kill`. Ele vai mandar um sinal ao aplicativo com mau funcionamento e instruir que este seja encerrado.
@@ -635,6 +651,14 @@ Comando utilizado para gerenciar serviços disponíveis na máquina. É possíve
 
 ```shell
 service --status-all
+```
+
+### systemctl
+
+Comando utilizado para gerenciar serviços disponíveis na máquina. É possível iniciar um serviço, parar e reiniciar além de poder listar todos os serviços disponíveis:
+
+```shell
+systemctl list-units --type=service --state=running
 ```
 
 ### nohup
@@ -829,12 +853,14 @@ Associa endereços IP a hostnames.
 ```mermaid
 flowchart TD
     Util-->uname
+    Util-->hostnamectl    
     Util-->history
     Util-->man
     Util-->clear
     Util-->bc
     Util-->keycuts
     click uname "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#uname"
+    click hostnamectl "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#hostnamectl"
     click history "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#history"
     click man "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#man"
     click clear "https://github.com/jppreti/documents/blob/main/linux/ComandosBasicos.md#dicas"
@@ -848,6 +874,14 @@ Significa Unix Name, mostra informações detalhadas sobre seu sistema Linux. Is
 
 ```shell
 uname -a
+```
+
+### hostnamectl
+
+Mostra informações detalhadas sobre seu sistema Linux. Isso inclui o nome da máquina, do sistema operacional, do kernel, da arquitetura, etc.
+
+```shell
+hostnamectl
 ```
 
 ### history
@@ -868,6 +902,8 @@ Precisa de uma ajuda mais resumida com exemplos, use `tldr`:
 tldr tail
 ```
 
+Apresenta ajuda sobre como utilizar o comando `tail`.
+
 ### bc
 
 Calculadora.
@@ -885,7 +921,14 @@ echo '20 + 5' | bc
 echo '20 \* 5' | bc
 ```
 
-Apresenta ajuda sobre como utilizar o comando `tail`.
+### crontab
+
+Permite visualizar tarefas agendadas:
+
+```shell
+crontab -l
+ls /etc/cron*
+```
 
 ### Dicas
 
