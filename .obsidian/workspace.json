@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "ad8041bb08689101",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9e56491753d33d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8d3e3c44dc003fc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2061e510d770f045",
+    "type": "split",
+    "children": [
+      {
+        "id": "815e2e640892f35a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "080dc2c98979ec16",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "32873b93c0132809",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "f3f54431cb2c553b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f6d18a301ebb1cb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "2dfe8d8cdbbf0b6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e78e902e516f5e9c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "6b3638ec6fea0618",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "linux/shell-script.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para shell-script"
+            }
+          },
+          {
+            "id": "49910252df36d965",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "766f1db1061bfa76",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "linux/shell-script.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de shell-script"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "a8d3e3c44dc003fc",
+  "lastOpenFiles": [
+    "linux/ComandosBasicos.md",
+    "README.md",
+    "investimento/PrecoMedio.md",
+    "investimento/CustoCarro.md",
+    "investimento/Corretoras.md",
+    "investimento/ComoComecei.md",
+    "investimento/CaixaInvestimento.md",
+    "investimento/FundosInvestimento.md",
+    "linux/Git.md",
+    "linux/shell-script.md",
+    "linux/Sem título.canvas",
+    "linux/NixPackage.md",
+    "linux/images/GitVisual.png",
+    "linux/images/GitCloneDownload.png",
+    "investimento/HP12C.md",
+    "c/datastructure/Tree.md"
+  ]
+}
