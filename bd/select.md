@@ -97,6 +97,16 @@ WHERE cidade = 'São Paulo' AND idade > 20;
 
 ---
 
+### Wildcards
+
+|Wildcard|Descrição|
+| :--- | :--- |
+|%|Representa zero ou mais caracteres|
+|_|Representa um único caractere|
+|[]|Representa um único caractere declarado nos colchetes|
+|^|Representa qualquer caractere que não esteja declarado nos colchetes|
+|-|Representa um único caractere dentro do intervalo especificado|
+
 ## 5. Ordenando Resultados (`ORDER BY`)
 
 Organiza o resultado em ordem crescente (`ASC` — padrão) ou decrescente (`DESC`).
