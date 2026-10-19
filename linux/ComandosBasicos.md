@@ -957,3 +957,18 @@ du -h | head -n 10
 ```
 
 Lista apenas as 10 primeiras linhas do resultado do comando `du`.
+
+### Comandos práticos
+
+```shell
+ALT+. # reutiliza o último comando, pode ser pressionado consecutivamente
+
+CTRL+Z # Pausa o processo em execução
+fg # Volta para o processo pausado
+bg # permite que o processo seja executado em background
+
+lsof -i :8080 # localiza o processo que está reservando a porta
+ss -tlno | grep 3000 # faz a mesma coisa
+type -a python # localiza qual de fato é o binário que está sendo utilizado
+
+```

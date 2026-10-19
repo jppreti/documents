@@ -78,6 +78,21 @@ echo "Este é um exemplo"
 
 ---
 
+## Importante
+
+Colocar no cabeçalho de cada shell script:
+
+```shell
+#!/usr/bin/env bash
+set -euo pipefail
+```
+
+`-e` encerra quando ocorrer a primeira falha
+
+`-u` mostra erros em variáveis indefinidas
+
+`-o pipefail` faz com que a pipeline falhe em caso de qualquer estágio falhar, não apenas o último.
+
 ## Variáveis
 
 Variáveis são utilizadas para armazenar valores. No Shell Script, não é necessário declarar o tipo da variável.
